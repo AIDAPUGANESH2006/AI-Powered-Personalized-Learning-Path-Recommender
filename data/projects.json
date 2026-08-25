@@ -1,0 +1,82 @@
+[
+  {
+    "id": "project-ml-pipeline",
+    "title": "End-to-End ML Pipeline",
+    "description": "Build a training pipeline with data ingestion, feature engineering, model training, and evaluation.",
+    "skills": ["machine_learning", "python"],
+    "difficulty": 4,
+    "duration_hours": 20
+  },
+  {
+    "id": "project-sentiment-nlp",
+    "title": "Sentiment Analysis Classifier",
+    "description": "Train and deploy a text sentiment model with preprocessing and metrics reporting.",
+    "skills": ["nlp", "python"],
+    "difficulty": 3,
+    "duration_hours": 15
+  },
+  {
+    "id": "project-rag-chatbot",
+    "title": "RAG-Powered Study Assistant",
+    "description": "Implement retrieval-augmented generation over course notes with vector search.",
+    "skills": ["llms", "python"],
+    "difficulty": 4,
+    "duration_hours": 18
+  },
+  {
+    "id": "project-dashboard",
+    "title": "Analytics Dashboard",
+    "description": "Create an interactive dashboard with filters, KPIs, and exportable reports.",
+    "skills": ["data_visualization", "data_analysis"],
+    "difficulty": 3,
+    "duration_hours": 12
+  },
+  {
+    "id": "project-fullstack-app",
+    "title": "Full Stack Task Manager",
+    "description": "React frontend, Node API, PostgreSQL persistence, and JWT authentication.",
+    "skills": ["react", "nodejs", "rest_apis", "sql"],
+    "difficulty": 4,
+    "duration_hours": 25
+  },
+  {
+    "id": "project-api-service",
+    "title": "REST API Microservice",
+    "description": "Design a versioned REST API with validation, logging, and OpenAPI docs.",
+    "skills": ["rest_apis", "software_engineering"],
+    "difficulty": 3,
+    "duration_hours": 14
+  },
+  {
+    "id": "project-docker-deploy",
+    "title": "Containerized App Deployment",
+    "description": "Dockerize an application and deploy with CI/CD to a cloud environment.",
+    "skills": ["docker", "ci_cd"],
+    "difficulty": 3,
+    "duration_hours": 16
+  },
+  {
+    "id": "project-k8s-deploy",
+    "title": "Kubernetes Deployment Lab",
+    "description": "Deploy a multi-tier app on Kubernetes with ingress and health checks.",
+    "skills": ["kubernetes", "docker"],
+    "difficulty": 4,
+    "duration_hours": 18
+  },
+  {
+    "id": "project-security-audit",
+    "title": "Web App Security Audit",
+    "description": "Perform vulnerability scanning, fix OWASP Top 10 issues, and document findings.",
+    "skills": ["cybersecurity_basics", "penetration_testing"],
+    "difficulty": 4,
+    "duration_hours": 20
+  },
+  {
+    "id": "project-system-design",
+    "title": "Scalable URL Shortener",
+    "description": "Design and prototype a URL shortener with caching, sharding, and rate limits.",
+    "skills": ["system_design", "rest_apis"],
+    "difficulty": 4,
+    "duration_hours": 22
+  }
+]

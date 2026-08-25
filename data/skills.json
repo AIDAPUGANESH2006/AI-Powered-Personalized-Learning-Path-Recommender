@@ -1,0 +1,182 @@
+[
+  {
+    "id": "programming_fundamentals",
+    "name": "Programming Fundamentals",
+    "description": "Variables, control flow, functions, and basic data structures.",
+    "prerequisites": []
+  },
+  {
+    "id": "python",
+    "name": "Python",
+    "description": "Python syntax, libraries, and scripting for data and automation.",
+    "prerequisites": ["programming_fundamentals"]
+  },
+  {
+    "id": "java",
+    "name": "Java",
+    "description": "Object-oriented programming with Java and JVM ecosystem basics.",
+    "prerequisites": ["programming_fundamentals"]
+  },
+  {
+    "id": "javascript",
+    "name": "JavaScript",
+    "description": "Modern JavaScript for web development and Node.js.",
+    "prerequisites": ["programming_fundamentals", "html_css"]
+  },
+  {
+    "id": "html_css",
+    "name": "HTML & CSS",
+    "description": "Semantic HTML, responsive CSS, and layout fundamentals.",
+    "prerequisites": []
+  },
+  {
+    "id": "sql",
+    "name": "SQL",
+    "description": "Relational queries, joins, aggregations, and schema design.",
+    "prerequisites": []
+  },
+  {
+    "id": "statistics",
+    "name": "Statistics",
+    "description": "Probability, distributions, hypothesis testing, and inference.",
+    "prerequisites": ["programming_fundamentals"]
+  },
+  {
+    "id": "linear_algebra",
+    "name": "Linear Algebra",
+    "description": "Vectors, matrices, eigenvalues for ML foundations.",
+    "prerequisites": ["programming_fundamentals"]
+  },
+  {
+    "id": "data_structures",
+    "name": "Data Structures & Algorithms",
+    "description": "Core DS&A patterns for interviews and efficient code.",
+    "prerequisites": ["programming_fundamentals"]
+  },
+  {
+    "id": "machine_learning",
+    "name": "Machine Learning",
+    "description": "Supervised and unsupervised learning, model evaluation.",
+    "prerequisites": ["python", "statistics", "linear_algebra"]
+  },
+  {
+    "id": "deep_learning",
+    "name": "Deep Learning",
+    "description": "Neural networks, CNNs, RNNs, and training at scale.",
+    "prerequisites": ["machine_learning"]
+  },
+  {
+    "id": "nlp",
+    "name": "Natural Language Processing",
+    "description": "Text preprocessing, embeddings, and language models.",
+    "prerequisites": ["machine_learning", "python"]
+  },
+  {
+    "id": "transformers",
+    "name": "Transformers",
+    "description": "Attention mechanisms and transformer architectures.",
+    "prerequisites": ["deep_learning", "nlp"]
+  },
+  {
+    "id": "llms",
+    "name": "Large Language Models",
+    "description": "Prompting, fine-tuning, RAG, and LLM application patterns.",
+    "prerequisites": ["transformers", "nlp"]
+  },
+  {
+    "id": "data_visualization",
+    "name": "Data Visualization",
+    "description": "Charts, dashboards, and storytelling with data.",
+    "prerequisites": ["python", "sql"]
+  },
+  {
+    "id": "data_analysis",
+    "name": "Data Analysis",
+    "description": "Exploratory analysis, cleaning, and insight generation.",
+    "prerequisites": ["python", "sql", "statistics"]
+  },
+  {
+    "id": "react",
+    "name": "React",
+    "description": "Component-based UI development with React.",
+    "prerequisites": ["javascript", "html_css"]
+  },
+  {
+    "id": "nodejs",
+    "name": "Node.js",
+    "description": "Server-side JavaScript, APIs, and npm ecosystem.",
+    "prerequisites": ["javascript"]
+  },
+  {
+    "id": "rest_apis",
+    "name": "REST APIs",
+    "description": "Designing and consuming RESTful web services.",
+    "prerequisites": ["javascript"]
+  },
+  {
+    "id": "docker",
+    "name": "Docker",
+    "description": "Containerization, images, and compose workflows.",
+    "prerequisites": ["programming_fundamentals"]
+  },
+  {
+    "id": "kubernetes",
+    "name": "Kubernetes",
+    "description": "Orchestration, deployments, and cluster operations.",
+    "prerequisites": ["docker"]
+  },
+  {
+    "id": "cloud_fundamentals",
+    "name": "Cloud Fundamentals",
+    "description": "Core cloud concepts: compute, storage, networking, IAM.",
+    "prerequisites": []
+  },
+  {
+    "id": "aws",
+    "name": "AWS",
+    "description": "Amazon Web Services core services and architecture.",
+    "prerequisites": ["cloud_fundamentals"]
+  },
+  {
+    "id": "ci_cd",
+    "name": "CI/CD",
+    "description": "Pipelines, automated testing, and deployment automation.",
+    "prerequisites": ["docker", "programming_fundamentals"]
+  },
+  {
+    "id": "networking",
+    "name": "Networking",
+    "description": "TCP/IP, DNS, HTTP, and network security basics.",
+    "prerequisites": []
+  },
+  {
+    "id": "cybersecurity_basics",
+    "name": "Cybersecurity Basics",
+    "description": "Threat models, encryption, and security best practices.",
+    "prerequisites": ["networking"]
+  },
+  {
+    "id": "penetration_testing",
+    "name": "Penetration Testing",
+    "description": "Ethical hacking methodology and vulnerability assessment.",
+    "prerequisites": ["cybersecurity_basics", "networking"]
+  },
+  {
+    "id": "system_design",
+    "name": "System Design",
+    "description": "Scalable architecture, trade-offs, and distributed systems.",
+    "prerequisites": ["data_structures", "rest_apis"]
+  },
+  {
+    "id": "git",
+    "name": "Git & Version Control",
+    "description": "Branching, collaboration, and code review workflows.",
+    "prerequisites": []
+  },
+  {
+    "id": "software_engineering",
+    "name": "Software Engineering",
+    "description": "Clean code, testing, design patterns, and SDLC practices.",
+    "prerequisites": ["programming_fundamentals", "git"]
+  }
+]

@@ -1,0 +1,119 @@
+[
+  {
+    "id": "ai_ml_engineer",
+    "name": "AI/ML Engineer",
+    "description": "Builds and deploys machine learning models and AI systems.",
+    "required_skills": {
+      "python": 0.85,
+      "statistics": 0.75,
+      "linear_algebra": 0.7,
+      "machine_learning": 0.85,
+      "deep_learning": 0.8,
+      "nlp": 0.65,
+      "llms": 0.7,
+      "data_structures": 0.6,
+      "docker": 0.55,
+      "software_engineering": 0.6
+    }
+  },
+  {
+    "id": "full_stack_developer",
+    "name": "Full Stack Developer",
+    "description": "Develops end-to-end web applications across frontend and backend.",
+    "required_skills": {
+      "javascript": 0.85,
+      "html_css": 0.8,
+      "react": 0.8,
+      "nodejs": 0.75,
+      "rest_apis": 0.8,
+      "sql": 0.7,
+      "git": 0.75,
+      "docker": 0.5,
+      "system_design": 0.55,
+      "software_engineering": 0.7
+    }
+  },
+  {
+    "id": "data_analyst",
+    "name": "Data Analyst",
+    "description": "Analyzes data to drive business insights and reporting.",
+    "required_skills": {
+      "sql": 0.85,
+      "python": 0.7,
+      "statistics": 0.75,
+      "data_analysis": 0.85,
+      "data_visualization": 0.8
+    }
+  },
+  {
+    "id": "data_scientist",
+    "name": "Data Scientist",
+    "description": "Applies statistical modeling and ML to solve complex problems.",
+    "required_skills": {
+      "python": 0.85,
+      "sql": 0.75,
+      "statistics": 0.9,
+      "linear_algebra": 0.75,
+      "machine_learning": 0.85,
+      "data_analysis": 0.8,
+      "data_visualization": 0.7,
+      "deep_learning": 0.6
+    }
+  },
+  {
+    "id": "cloud_engineer",
+    "name": "Cloud Engineer",
+    "description": "Designs and manages cloud infrastructure and services.",
+    "required_skills": {
+      "cloud_fundamentals": 0.85,
+      "aws": 0.8,
+      "networking": 0.75,
+      "docker": 0.7,
+      "kubernetes": 0.65,
+      "ci_cd": 0.6,
+      "python": 0.55
+    }
+  },
+  {
+    "id": "cybersecurity_engineer",
+    "name": "Cybersecurity Engineer",
+    "description": "Protects systems through security architecture and monitoring.",
+    "required_skills": {
+      "networking": 0.85,
+      "cybersecurity_basics": 0.9,
+      "penetration_testing": 0.7,
+      "python": 0.6,
+      "cloud_fundamentals": 0.55
+    }
+  },
+  {
+    "id": "devops_engineer",
+    "name": "DevOps Engineer",
+    "description": "Automates delivery pipelines and maintains production reliability.",
+    "required_skills": {
+      "git": 0.8,
+      "docker": 0.85,
+      "kubernetes": 0.75,
+      "ci_cd": 0.85,
+      "cloud_fundamentals": 0.7,
+      "aws": 0.65,
+      "networking": 0.65,
+      "python": 0.55
+    }
+  },
+  {
+    "id": "software_engineer",
+    "name": "Software Engineer",
+    "description": "Designs, builds, and maintains reliable software systems.",
+    "required_skills": {
+      "programming_fundamentals": 0.9,
+      "data_structures": 0.85,
+      "software_engineering": 0.85,
+      "git": 0.8,
+      "rest_apis": 0.7,
+      "sql": 0.65,
+      "system_design": 0.7,
+      "python": 0.7
+    }
+  }
+]

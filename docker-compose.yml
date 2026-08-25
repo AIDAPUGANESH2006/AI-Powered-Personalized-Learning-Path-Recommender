@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: pathwise-postgres
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: pathwise
+      POSTGRES_PASSWORD: pathwise
+      POSTGRES_DB: pathwise
+    volumes:
+      - pathwise_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U pathwise -d pathwise"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  pathwise_pgdata:

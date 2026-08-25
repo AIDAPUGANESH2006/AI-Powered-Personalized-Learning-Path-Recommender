@@ -1,0 +1,342 @@
+[
+  {
+    "id": "assessment-python",
+    "title": "Python Fundamentals Quiz",
+    "skill_id": "python",
+    "pass_threshold": 0.6,
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Which keyword defines a function in Python?",
+        "options": ["func", "def", "function", "lambda"],
+        "correct_index": 1
+      },
+      {
+        "id": "q2",
+        "question": "What is the output type of type([])?",
+        "options": ["tuple", "list", "dict", "set"],
+        "correct_index": 1
+      },
+      {
+        "id": "q3",
+        "question": "Which method adds an item to the end of a list?",
+        "options": ["add()", "push()", "append()", "insert_end()"],
+        "correct_index": 2
+      },
+      {
+        "id": "q4",
+        "question": "What does 'import math' allow you to use?",
+        "options": ["Math module functions", "Only constants", "GUI widgets", "Database drivers"],
+        "correct_index": 0
+      },
+      {
+        "id": "q5",
+        "question": "Which loop iterates over a sequence in Python?",
+        "options": ["loop", "for", "repeat", "iterate"],
+        "correct_index": 1
+      },
+      {
+        "id": "q6",
+        "question": "What is a dictionary keyed by?",
+        "options": ["Index only", "Hashable keys", "Floating values", "Tuples only"],
+        "correct_index": 1
+      },
+      {
+        "id": "q7",
+        "question": "Which operator checks equality?",
+        "options": ["=", "==", "===", "eq"],
+        "correct_index": 1
+      },
+      {
+        "id": "q8",
+        "question": "What does len('abc') return?",
+        "options": ["2", "3", "4", "Error"],
+        "correct_index": 1
+      },
+      {
+        "id": "q9",
+        "question": "Which keyword handles exceptions?",
+        "options": ["catch", "handle", "except", "error"],
+        "correct_index": 2
+      },
+      {
+        "id": "q10",
+        "question": "List comprehension syntax is written with:",
+        "options": ["Curly braces", "Square brackets", "Parentheses only", "Angle brackets"],
+        "correct_index": 1
+      }
+    ]
+  },
+  {
+    "id": "assessment-statistics",
+    "title": "Statistics Essentials Quiz",
+    "skill_id": "statistics",
+    "pass_threshold": 0.6,
+    "questions": [
+      {
+        "id": "q1",
+        "question": "The mean is sensitive to:",
+        "options": ["Sample size", "Outliers", "Units", "Random seed"],
+        "correct_index": 1
+      },
+      {
+        "id": "q2",
+        "question": "A p-value below 0.05 typically indicates:",
+        "options": ["No effect", "Statistical significance", "Perfect correlation", "Large sample"],
+        "correct_index": 1
+      },
+      {
+        "id": "q3",
+        "question": "Standard deviation measures:",
+        "options": ["Central tendency", "Spread", "Skew only", "Correlation"],
+        "correct_index": 1
+      },
+      {
+        "id": "q4",
+        "question": "Normal distribution is characterized by:",
+        "options": ["Two peaks", "Bell shape", "Uniform density", "No variance"],
+        "correct_index": 1
+      },
+      {
+        "id": "q5",
+        "question": "Correlation measures:",
+        "options": ["Causation", "Linear association", "Variance", "Median shift"],
+        "correct_index": 1
+      },
+      {
+        "id": "q6",
+        "question": "A confidence interval estimates:",
+        "options": ["Population parameter range", "Exact population value", "Sample size", "P-value"],
+        "correct_index": 0
+      },
+      {
+        "id": "q7",
+        "question": "The median is the:",
+        "options": ["Most frequent value", "Middle value", "Maximum value", "Range midpoint always"],
+        "correct_index": 1
+      },
+      {
+        "id": "q8",
+        "question": "Type I error is:",
+        "options": ["False negative", "False positive", "Correct rejection", "Power loss only"],
+        "correct_index": 1
+      },
+      {
+        "id": "q9",
+        "question": "Variance is the square of:",
+        "options": ["Mean", "Standard deviation", "Median", "Mode"],
+        "correct_index": 1
+      },
+      {
+        "id": "q10",
+        "question": "Bayes' theorem updates:",
+        "options": ["Prior with evidence", "Sample mean", "Variance only", "Histogram bins"],
+        "correct_index": 0
+      }
+    ]
+  },
+  {
+    "id": "assessment-ml",
+    "title": "Machine Learning Fundamentals Quiz",
+    "skill_id": "machine_learning",
+    "pass_threshold": 0.6,
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Supervised learning uses:",
+        "options": ["Unlabeled data only", "Labeled data", "No training", "Random labels"],
+        "correct_index": 1
+      },
+      {
+        "id": "q2",
+        "question": "Overfitting means the model:",
+        "options": ["Generalizes well", "Memorizes training noise", "Has high bias only", "Uses too little data always"],
+        "correct_index": 1
+      },
+      {
+        "id": "q3",
+        "question": "Cross-validation helps estimate:",
+        "options": ["Training time", "Generalization performance", "Feature names", "Database size"],
+        "correct_index": 1
+      },
+      {
+        "id": "q4",
+        "question": "Logistic regression is used for:",
+        "options": ["Clustering", "Classification", "Dimensionality only", "Time series only"],
+        "correct_index": 1
+      },
+      {
+        "id": "q5",
+        "question": "A decision tree splits data to reduce:",
+        "options": ["Impurity or error", "Dataset size", "Feature count", "Learning rate"],
+        "correct_index": 0
+      },
+      {
+        "id": "q6",
+        "question": "Regularization reduces:",
+        "options": ["Underfitting always", "Overfitting", "Label noise", "Inference speed only"],
+        "correct_index": 1
+      },
+      {
+        "id": "q7",
+        "question": "Precision measures:",
+        "options": ["True positives among predicted positives", "All positives found", "Accuracy on negatives", "F1 only"],
+        "correct_index": 0
+      },
+      {
+        "id": "q8",
+        "question": "Gradient descent optimizes by:",
+        "options": ["Random search", "Following loss gradients", "Grid search only", "Label smoothing"],
+        "correct_index": 1
+      },
+      {
+        "id": "q9",
+        "question": "K-means is an example of:",
+        "options": ["Supervised learning", "Unsupervised clustering", "Reinforcement learning", "Ensemble boosting"],
+        "correct_index": 1
+      },
+      {
+        "id": "q10",
+        "question": "A confusion matrix shows:",
+        "options": ["Feature importances", "Prediction vs actual counts", "Learning curves", "Hyperparameters"],
+        "correct_index": 1
+      }
+    ]
+  },
+  {
+    "id": "assessment-sql",
+    "title": "SQL Proficiency Quiz",
+    "skill_id": "sql",
+    "pass_threshold": 0.6,
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Which clause filters rows after aggregation?",
+        "options": ["WHERE", "HAVING", "ORDER BY", "GROUP BY"],
+        "correct_index": 1
+      },
+      {
+        "id": "q2",
+        "question": "INNER JOIN returns rows when:",
+        "options": ["Either table matches", "Both tables match on key", "Left table only", "All combinations"],
+        "correct_index": 1
+      },
+      {
+        "id": "q3",
+        "question": "PRIMARY KEY ensures:",
+        "options": ["Duplicate rows", "Unique identifiable rows", "Null values allowed", "No indexes"],
+        "correct_index": 1
+      },
+      {
+        "id": "q4",
+        "question": "COUNT(*) counts:",
+        "options": ["Non-null values in one column", "All rows including nulls", "Distinct values only", "Joins"],
+        "correct_index": 1
+      },
+      {
+        "id": "q5",
+        "question": "Which function returns unique values?",
+        "options": ["SUM", "DISTINCT", "AVG", "CONCAT"],
+        "correct_index": 1
+      },
+      {
+        "id": "q6",
+        "question": "ORDER BY default sort is:",
+        "options": ["Descending", "Ascending", "Random", "Grouped"],
+        "correct_index": 1
+      },
+      {
+        "id": "q7",
+        "question": "A foreign key enforces:",
+        "options": ["Referential integrity", "String length", "Index uniqueness", "Transaction isolation"],
+        "correct_index": 0
+      },
+      {
+        "id": "q8",
+        "question": "Subqueries can appear in:",
+        "options": ["SELECT, WHERE, FROM", "Only SELECT", "Only DELETE", "Only CREATE"],
+        "correct_index": 0
+      },
+      {
+        "id": "q9",
+        "question": "LIKE with '%' matches:",
+        "options": ["Exact string only", "Pattern with wildcards", "Numeric ranges", "Dates only"],
+        "correct_index": 1
+      },
+      {
+        "id": "q10",
+        "question": "Window functions compute over:",
+        "options": ["Whole table only", "Defined partitions", "Primary keys only", "Indexes"],
+        "correct_index": 1
+      }
+    ]
+  },
+  {
+    "id": "assessment-react",
+    "title": "React Essentials Quiz",
+    "skill_id": "react",
+    "pass_threshold": 0.6,
+    "questions": [
+      {
+        "id": "q1",
+        "question": "JSX stands for:",
+        "options": ["JavaScript XML", "JSON Extension", "Java Syntax", "Joint Script"],
+        "correct_index": 0
+      },
+      {
+        "id": "q2",
+        "question": "useState returns:",
+        "options": ["Only a setter", "State value and setter", "A reducer", "Context object"],
+        "correct_index": 1
+      },
+      {
+        "id": "q3",
+        "question": "Props in React are:",
+        "options": ["Mutable by child", "Read-only inputs", "Global variables", "Hooks"],
+        "correct_index": 1
+      },
+      {
+        "id": "q4",
+        "question": "useEffect runs after:",
+        "options": ["Server boot", "Render commits", "Import time", "Build only"],
+        "correct_index": 1
+      },
+      {
+        "id": "q5",
+        "question": "Keys in lists help React:",
+        "options": ["Style elements", "Identify changed items", "Fetch data", "Validate props"],
+        "correct_index": 1
+      },
+      {
+        "id": "q6",
+        "question": "Controlled components bind value to:",
+        "options": ["DOM only", "React state", "CSS", "Router"],
+        "correct_index": 1
+      },
+      {
+        "id": "q7",
+        "question": "Context API shares data without:",
+        "options": ["Any re-renders", "Prop drilling every level", "Components", "Hooks"],
+        "correct_index": 1
+      },
+      {
+        "id": "q8",
+        "question": "React fragments let you:",
+        "options": ["Add wrapper divs", "Group without extra DOM nodes", "Create portals only", "Use classes only"],
+        "correct_index": 1
+      },
+      {
+        "id": "q9",
+        "question": "Virtual DOM helps by:",
+        "options": ["Replacing HTTP", "Efficient UI diffing", "Removing JavaScript", "Caching SQL"],
+        "correct_index": 1
+      },
+      {
+        "id": "q10",
+        "question": "StrictMode in development:",
+        "options": ["Disables hooks", "Highlights potential problems", "Removes warnings", "Builds production bundle"],
+        "correct_index": 1
+      }
+    ]
+  }
+]

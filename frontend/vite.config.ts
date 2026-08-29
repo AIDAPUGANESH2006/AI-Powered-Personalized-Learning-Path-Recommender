@@ -8,7 +8,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '/api': {
-        target: 'http://localhost:8000',
+        target: 'https://pathwise-ai-backend-knn1.onrender.com',
         changeOrigin: true,
       },
     },

@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+
   server: {
     port: 5173,
     proxy: {
@@ -12,5 +13,9 @@ export default defineConfig({
         changeOrigin: true,
       },
     },
+  },
+
+  preview: {
+    allowedHosts: ['pathwise-ai-frontend.onrender.com'],
   },
 })

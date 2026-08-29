@@ -137,10 +137,10 @@ export default function OnboardingPage() {
           </p>
           <button
             type="button"
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/dashboard')}
             className="rounded-lg bg-indigo-600 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-indigo-700"
           >
-            Back to home
+            Go to dashboard
           </button>
         </div>
       </div>

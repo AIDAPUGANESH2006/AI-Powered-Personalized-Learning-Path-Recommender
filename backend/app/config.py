@@ -25,5 +25,11 @@ class Settings(BaseSettings):
     secret_key: str = "change-me-in-production-use-a-long-random-string"
     access_token_expire_minutes: int = 60 * 24 * 7  # 7 days
 
+    # AI — set at least one for LLM features (Phase 7+)
+    gemini_api_key: str | None = None
+    google_api_key: str | None = None
+    openai_api_key: str | None = None
+    anthropic_api_key: str | None = None
+
 
 settings = Settings()

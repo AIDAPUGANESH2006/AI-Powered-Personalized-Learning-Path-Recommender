@@ -9,9 +9,17 @@ export default function LandingPage() {
           <Route className="h-7 w-7" />
           <span className="text-xl font-bold tracking-tight">PathWise AI</span>
         </div>
-        <span className="rounded-full bg-indigo-100 px-3 py-1 text-xs font-medium text-indigo-700">
-          HCL AMPlified
-        </span>
+        <div className="flex items-center gap-3">
+          <Link
+            to="/login"
+            className="text-sm font-medium text-slate-500 transition hover:text-indigo-700"
+          >
+            Sign in
+          </Link>
+          <span className="rounded-full bg-indigo-100 px-3 py-1 text-xs font-medium text-indigo-700">
+            HCL AMPlified
+          </span>
+        </div>
       </header>
 
       <main className="mx-auto max-w-6xl px-6 pb-20 pt-10">
@@ -29,13 +37,21 @@ export default function LandingPage() {
               learning journeys, and adapts your roadmap using assessments and
               feedback — not generic chatbot guesses.
             </p>
-            <Link
-              to="/register"
-              className="mt-8 inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-indigo-200 transition hover:bg-indigo-700"
-            >
-              Build My Path
-              <ArrowRight className="h-5 w-5" />
-            </Link>
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <Link
+                to="/register"
+                className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-indigo-200 transition hover:bg-indigo-700"
+              >
+                Build My Path
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+              <Link
+                to="/login"
+                className="rounded-xl border border-slate-300 bg-white px-6 py-3 text-base font-semibold text-slate-700 transition hover:bg-slate-50"
+              >
+                Sign in
+              </Link>
+            </div>
           </div>
 
           <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-xl shadow-slate-200/50">
@@ -44,17 +60,44 @@ export default function LandingPage() {
               <h2 className="font-semibold">Core learning loop</h2>
             </div>
             <ol className="space-y-3 text-sm text-slate-600">
-              <li className="rounded-lg bg-slate-50 px-3 py-2">
-                Profile → Skill gap analysis
-              </li>
-              <li className="rounded-lg bg-slate-50 px-3 py-2">
-                Prerequisite-aware recommendations
-              </li>
-              <li className="rounded-lg bg-slate-50 px-3 py-2">
-                Roadmap → Learn → Assess → Adapt → Explain
-              </li>
+              {[
+                'Profile → Skill gap analysis',
+                'Prerequisite-aware recommendations',
+                'Roadmap → Learn → Assess → Adapt',
+                '"Why this?" — every recommendation explained',
+              ].map((step, i) => (
+                <li key={step} className="flex items-center gap-3 rounded-lg bg-slate-50 px-3 py-2.5">
+                  <span className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-indigo-100 text-xs font-bold text-indigo-700">
+                    {i + 1}
+                  </span>
+                  {step}
+                </li>
+              ))}
             </ol>
           </div>
+        </section>
+
+        {/* Feature highlights */}
+        <section className="mt-16 grid gap-5 sm:grid-cols-3">
+          {[
+            {
+              title: 'Deterministic engine',
+              body:  'Skill gaps, prerequisites, and scoring are pure algorithms — not LLM hallucinations.',
+            },
+            {
+              title: 'Adaptive roadmap',
+              body:  'Fail an assessment → reinforcement module inserted. Pass → next phase unlocked immediately.',
+            },
+            {
+              title: 'Explainable AI',
+              body:  '"Why this?" cites your actual skill levels and gap sizes, not boilerplate text.',
+            },
+          ].map(f => (
+            <div key={f.title} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <h3 className="font-semibold text-slate-900">{f.title}</h3>
+              <p className="mt-1.5 text-sm text-slate-500">{f.body}</p>
+            </div>
+          ))}
         </section>
       </main>
     </div>

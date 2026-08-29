@@ -4,7 +4,7 @@ from __future__ import annotations
 from fastapi import APIRouter, Depends
 from pydantic import BaseModel
 from sqlalchemy import select
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session, selectinload
 
 from app.database import get_db
 from app.models import CareerRole, Skill
@@ -32,7 +32,9 @@ class CareerBrief(BaseModel):
 
 @router.get("/skills", response_model=list[SkillBrief])
 def list_skills(db: Session = Depends(get_db)) -> list[SkillBrief]:
-    skills = db.scalars(select(Skill)).all()
+    skills = db.scalars(
+        select(Skill).options(selectinload(Skill.prerequisites))
+    ).all()
     return [
         SkillBrief(
             id=s.id,
@@ -46,7 +48,9 @@ def list_skills(db: Session = Depends(get_db)) -> list[SkillBrief]:
 
 @router.get("/careers", response_model=list[CareerBrief])
 def list_careers(db: Session = Depends(get_db)) -> list[CareerBrief]:
-    careers = db.scalars(select(CareerRole)).all()
+    careers = db.scalars(
+        select(CareerRole).options(selectinload(CareerRole.required_skills))
+    ).all()
     return [
         CareerBrief(
             id=c.id,

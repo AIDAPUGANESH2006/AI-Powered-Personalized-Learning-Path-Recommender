@@ -360,11 +360,6 @@ Contributions, issues, and feature requests are welcome.
 3. Commit your changes
 4. Push to the branch and open a Pull Request
 
----
-
-## 📄 License
-
-*Add your chosen license here (e.g. MIT, Apache 2.0). If unlicensed, state that explicitly so others know the reuse terms.*
 
 ---
 

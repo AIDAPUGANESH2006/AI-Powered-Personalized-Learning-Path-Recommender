@@ -1,251 +1,134 @@
-# PathWise AI
+# PathWise AI 🎯
 
-## AI-Powered Personalized Learning Path Recommender
+**AI-Powered Personalized Learning Path Recommender**
 
-PathWise AI is an AI-powered personalized learning platform developed for the **HCL AMPlified** problem statement.
+PathWise AI identifies the gap between a learner's current skills and their target career role, recommends relevant learning resources, generates a prerequisite-aware roadmap, evaluates learners through assessments, and adapts the journey based on results and feedback.
 
-The system identifies the gap between a learner's current skills and their target career role, recommends relevant learning resources, generates a prerequisite-aware learning roadmap, evaluates the learner through assessments, and adapts the learning journey based on assessment results and feedback.
+Built for the **HCL AMPlified** problem statement.
 
----
-
-## 🚀 Live Demo
-
-### Frontend
-
-https://pathwise-ai-frontend.onrender.com
-
-### Backend API
-
-https://pathwise-ai-backend-knn1.onrender.com
-
-### Interactive API Documentation
-
-https://pathwise-ai-backend-knn1.onrender.com/docs
-
-> The frontend is deployed on Render and communicates with the FastAPI backend.
+[![Frontend](https://img.shields.io/badge/frontend-live-brightgreen)](https://pathwise-ai-frontend.onrender.com)
+[![Backend](https://img.shields.io/badge/backend-live-brightgreen)](https://pathwise-ai-backend-knn1.onrender.com)
+[![API Docs](https://img.shields.io/badge/API-docs-blue)](https://pathwise-ai-backend-knn1.onrender.com/docs)
+[![License](https://img.shields.io/badge/license-MIT-lightgrey)](#license)
 
 ---
 
-# 🎯 Problem Statement
+## 🔗 Quick Links
 
-Learners often struggle to determine:
-
-- What skills they currently have
-- Which skills they are missing
-- What they should learn first
-- Which courses are relevant to their career goal
-- Whether they have achieved sufficient proficiency
-- How their learning path should change based on their performance
-
-Traditional learning platforms often provide generic course lists without considering the learner's current skill level, target role, prerequisites, or assessment performance.
-
-### PathWise AI addresses this problem by providing a personalized and adaptive learning journey.
+| Resource | Link |
+|---|---|
+| Live App | https://pathwise-ai-frontend.onrender.com |
+| Backend API | https://pathwise-ai-backend-knn1.onrender.com |
+| API Documentation (Swagger) | https://pathwise-ai-backend-knn1.onrender.com/docs |
+| Repository | https://github.com/AIDAPUGANESH2006/AI-Powered-Personalized-Learning-Path-Recommender |
 
 ---
 
-# 💡 Solution
+## 📑 Table of Contents
 
-PathWise AI creates an individualized learning path using information such as:
-
-- Learner profile
-- Current skills
-- Target career role
-- Skill proficiency
-- Skill gaps
-- Learning prerequisites
-- Assessment performance
-- Learner feedback
-- Learning progress
-
-The system uses these inputs to recommend learning activities and organize them into a structured roadmap.
-
----
-
-# ✨ Key Features
-
-## 1. User Registration & Authentication
-
-Users can create an account and securely log in to the application.
-
-Authentication is implemented using:
-
-- JWT tokens
-- Password hashing with bcrypt
-- FastAPI authentication/dependency mechanisms
+- [Problem Statement](#-problem-statement)
+- [Solution](#-solution)
+- [Key Features](#-key-features)
+- [System Architecture](#️-system-architecture)
+- [Tech Stack](#️-tech-stack)
+- [Project Structure](#-project-structure)
+- [Getting Started](#-getting-started)
+- [Environment Variables](#-environment-variables)
+- [AI Components](#-ai-components)
+- [Testing Checklist](#-testing-checklist)
+- [Deployment](#-deployment)
+- [Submission Package](#-submission-package)
+- [Contributing](#-contributing)
+- [License](#-license)
 
 ---
 
-## 2. Learner Onboarding
+## 🎯 Problem Statement
 
-The onboarding flow collects information about the learner and their learning goals.
+Learners often struggle to determine what skills they have, what they're missing, what to learn first, which courses actually matter for their goal, and whether they're making real progress. Traditional platforms respond with generic course lists that ignore skill level, prerequisites, and performance.
 
-The learner can provide information such as:
+**PathWise AI replaces the generic course list with a personalized, adaptive learning journey.**
 
-- Background
-- Current skills
-- Experience
-- Target career role
-- Learning preferences
+## 💡 Solution
 
-This information is used to personalize the learning journey.
+PathWise AI builds an individualized path using the learner's profile, current skills, target role, skill gaps, prerequisites, assessment performance, and feedback — then organizes everything into a structured, evolving roadmap.
 
 ---
 
-## 3. Skill Gap Analysis
+## ✨ Key Features
 
-The system compares the learner's current capabilities with the skills required for their target role.
-
-The skill-gap module identifies:
-
-- Existing skills
-- Missing skills
-- Areas requiring improvement
-- Relative proficiency
-
-This allows the platform to focus learning recommendations on the learner's actual needs.
-
----
-
-## 4. Personalized Recommendations
-
-PathWise AI recommends learning resources based on the learner's skill gaps and target role.
-
-Recommendations consider the learner's current state instead of simply displaying a generic course catalog.
+| # | Feature | Description |
+|---|---|---|
+| 1 | **Authentication** | JWT-based auth with bcrypt password hashing via FastAPI dependencies |
+| 2 | **Learner Onboarding** | Captures background, current skills, experience, target role, and preferences |
+| 3 | **Skill Gap Analysis** | Compares current skills vs. target-role requirements to surface gaps and proficiency |
+| 4 | **Personalized Recommendations** | Resource suggestions driven by the learner's actual gaps, not a static catalog |
+| 5 | **Prerequisite-Aware Roadmap** | Structured path where advanced topics unlock only after prerequisites (e.g. `HTML & CSS → JavaScript → React → Advanced React`) |
+| 6 | **Progress Tracking** | Course items tracked via a "Mark done" action, driving what unlocks next |
+| 7 | **Interactive Assessments** | MCQ quizzes for SQL, Python, React, ML, and Statistics with scoring and feedback |
+| 8 | **Adaptive Learning** | Roadmap shifts based on assessment performance — reinforcement on weak areas, acceleration on strong ones |
+| 9 | **AI Tutor** | Gemini-powered assistant for explanations and learning support |
+| 10 | **Feedback-Based Learning** | Learner feedback feeds back into recommendations, alongside scores |
+| 11 | **Personalized Dashboard** | Central view of progress, recommendations, skills, roadmap, and assessments |
+| 12 | **Explainable Recommendations** | Surfaces *why* a recommendation was made, not just what it is |
 
 ---
 
-## 5. Prerequisite-Aware Learning Roadmap
+## 🏗️ System Architecture
 
-The platform generates a structured learning roadmap.
-
-Learning items can have prerequisites.
-
-For example:
-
-```text
-HTML & CSS
-     ↓
-JavaScript
-     ↓
-React
-     ↓
-Advanced React
-
-This prevents learners from being directed toward advanced topics before completing important prerequisite concepts.
-
-6. Course Progress Tracking
-
-Course items can be completed using the:
-
-Mark done
-
-action.
-
-The system tracks the learner's progress and uses completion information to determine the next available learning activities.
-
-7. Interactive Assessments
-
-The application includes interactive multiple-choice assessments.
-
-Assessment areas include:
-
-SQL
-Python
-React
-Machine Learning
-Statistics
-
-Assessments provide:
-
-Questions
-Answer selection
-Scoring
-Results
-Learning feedback
-
-Example assessment routes:
-
-/assessment/assessment-sql
-/assessment/assessment-python
-/assessment/assessment-react
-/assessment/assessment-ml
-/assessment/assessment-statistics
-8. Adaptive Learning
-
-Assessment results can influence the learner's learning journey.
-
-If a learner performs poorly in a particular skill, the system can identify that area as requiring additional learning.
-
-If the learner demonstrates strong proficiency, the roadmap can progress toward more advanced material.
-
-This creates an adaptive rather than static learning path.
-
-9. AI Tutor
-
-PathWise AI includes an AI-powered tutor.
-
-The tutor can assist learners by providing explanations and learning support related to their learning journey.
-
-The AI functionality is integrated with the Gemini API.
-
-10. Feedback-Based Learning
-
-Learner feedback can be used as an additional signal for improving recommendations and adapting the learning experience.
-
-This allows the system to consider more than just assessment scores.
-
-11. Personalized Dashboard
-
-The dashboard provides a centralized view of the learner's learning journey.
-
-It can present information such as:
-
-Learning progress
-Recommended activities
-Skill information
-Roadmap status
-Assessment information
-12. Explainable Recommendations
-
-The application includes explanation functionality to help learners understand why particular learning recommendations are relevant to their current learning goals.
-
-🏗️ System Architecture
-
-The project follows a frontend-backend architecture.
-
+```
                     ┌──────────────────────┐
-                    │      Learner         │
+                    │       Learner        │
                     └──────────┬───────────┘
                                │
                                ▼
                     ┌──────────────────────┐
                     │   React Frontend     │
                     │ TypeScript + Vite    │
-                    │ Tailwind CSS          │
+                    │   Tailwind CSS       │
                     └──────────┬───────────┘
                                │
-                         HTTP / API
+                          HTTP / API
                                │
                                ▼
                     ┌──────────────────────┐
-                    │    FastAPI Backend   │
-                    │      Python          │
+                    │   FastAPI Backend    │
+                    │       Python         │
                     └──────────┬───────────┘
                                │
-             ┌─────────────────┼─────────────────┐
-             │                 │                 │
-             ▼                 ▼                 ▼
-     ┌──────────────┐  ┌──────────────┐  ┌──────────────┐
-     │ AI Modules   │  │ PostgreSQL   │  │ Authentication│
-     │ Gemini API   │  │ + pgvector   │  │ JWT + bcrypt │
-     └──────────────┘  └──────────────┘  └──────────────┘
-             │                 │
-             └─────────────────┘
-📁 Project Structure
+              ┌────────────────┼────────────────┐
+              │                │                 │
+              ▼                ▼                 ▼
+      ┌──────────────┐ ┌──────────────┐ ┌────────────────┐
+      │  AI Modules  │ │  PostgreSQL  │ │ Authentication  │
+      │  Gemini API  │ │  + pgvector  │ │  JWT + bcrypt   │
+      └──────────────┘ └──────────────┘ └────────────────┘
+```
+
+**Flow:** Register → Login → Onboarding → Career Goal → Skill Assessment → Skill Gap Analysis → Recommendations → Roadmap → Courses & Assessments → Adaptive Updates → AI Tutor / Feedback
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Frontend | React, TypeScript, Vite, Tailwind CSS |
+| Backend | FastAPI (Python), Pydantic, SQLAlchemy |
+| Database | PostgreSQL + pgvector (hosted on Neon) |
+| Auth | JWT, bcrypt |
+| AI | Google Gemini API |
+| HTTP Client | HTTPX |
+| Deployment | Render (frontend + backend) |
+
+---
+
+## 📁 Project Structure
+
+```
 AI-Powered-Personalized-Learning-Path-Recommender/
 │
 ├── backend/
-│   │
 │   ├── app/
 │   │   ├── ai/
 │   │   │   ├── adaptive_engine.py
@@ -256,7 +139,6 @@ AI-Powered-Personalized-Learning-Path-Recommender/
 │   │   │   ├── roadmap_generator.py
 │   │   │   ├── skill_gap.py
 │   │   │   └── tutor.py
-│   │   │
 │   │   ├── api/
 │   │   │   ├── assessment.py
 │   │   │   ├── auth.py
@@ -264,22 +146,18 @@ AI-Powered-Personalized-Learning-Path-Recommender/
 │   │   │   ├── feedback.py
 │   │   │   ├── recommendations.py
 │   │   │   └── roadmap.py
-│   │   │
 │   │   ├── schemas/
 │   │   ├── services/
 │   │   └── main.py
-│   │
 │   ├── scripts/
 │   ├── requirements.txt
 │   ├── run.py
 │   └── runtime.txt
 │
 ├── frontend/
-│   │
 │   ├── src/
 │   │   ├── components/
 │   │   │   └── FeedbackControl.tsx
-│   │   │
 │   │   ├── pages/
 │   │   │   ├── AssessmentPage.tsx
 │   │   │   ├── CoursesPage.tsx
@@ -291,9 +169,7 @@ AI-Powered-Personalized-Learning-Path-Recommender/
 │   │   │   ├── RoadmapPage.tsx
 │   │   │   ├── SkillGapPage.tsx
 │   │   │   └── TutorPage.tsx
-│   │   │
 │   │   └── ...
-│   │
 │   ├── package.json
 │   ├── package-lock.json
 │   └── vite.config.ts
@@ -304,482 +180,194 @@ AI-Powered-Personalized-Learning-Path-Recommender/
 ├── .env.example
 ├── start-dev.bat
 └── README.md
-🛠️ Technology Stack
-Layer	Technology
-Frontend	React
-Programming Language	TypeScript
-Build Tool	Vite
-Styling	Tailwind CSS
-Backend	FastAPI
-Backend Language	Python
-Validation	Pydantic
-ORM	SQLAlchemy
-Database	PostgreSQL
-Vector Database	pgvector
-Database Hosting	Neon
-Authentication	JWT
-Password Security	bcrypt
-AI	Google Gemini API
-HTTP Client	HTTPX
-Frontend Deployment	Render
-Backend Deployment	Render
-🔄 Application Workflow
+```
 
-The overall learning flow is:
+---
 
-User Registration
-        ↓
-Login
-        ↓
-Learner Onboarding
-        ↓
-Career Goal Selection
-        ↓
-Skill Assessment
-        ↓
-Skill Gap Analysis
-        ↓
-Personalized Recommendations
-        ↓
-Learning Roadmap
-        ↓
-Courses
-        ↓
-Assessments
-        ↓
-Assessment Results
-        ↓
-Adaptive Learning
-        ↓
-AI Tutor / Feedback
-        ↓
-Updated Learning Journey
-📋 Roadmap Progression
+## 🚀 Getting Started
 
-The roadmap is designed around learning dependencies.
+### Prerequisites
 
-Learning activities can be categorized as:
+- Git
+- Node.js 20+
+- Python 3.12+
+- PostgreSQL (or a Neon PostgreSQL instance)
+- A Gemini API key
+- Docker *(optional — only if running PostgreSQL locally via container)*
 
-Course
+### 1. Clone the repository
 
-Courses are learning modules.
+```bash
+git clone https://github.com/AIDAPUGANESH2006/AI-Powered-Personalized-Learning-Path-Recommender.git
+cd AI-Powered-Personalized-Learning-Path-Recommender
+```
 
-They can be completed using:
+### 2. Configure environment variables
 
-Mark done
-Assessment
+```bash
+copy .env.example .env      # Windows
+# cp .env.example .env      # macOS/Linux
+```
 
-Assessments provide interactive quizzes.
+Then fill in the values — see [Environment Variables](#-environment-variables).
 
-They can be accessed using:
+### 3. Backend setup
 
-Take quiz
+```bash
+cd backend
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1      # Windows PowerShell
+pip install -r requirements.txt
+python run.py
+# or: uvicorn app.main:app --reload --port 8000
+```
 
-The learner progresses through the roadmap as prerequisite learning activities are completed.
+Verify it's running:
+- Health check: `http://localhost:8000/api/health`
+- Swagger docs: `http://localhost:8000/docs`
 
-🧪 Assessment System
+### 4. Frontend setup
 
-The application contains assessment functionality for different technical skills.
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-Available assessment examples:
+Open the URL Vite prints (typically `http://localhost:5173`).
 
-SQL Proficiency Quiz
-Python Fundamentals Quiz
-React Quiz
-Machine Learning Quiz
-Statistics Quiz
+To verify a production build:
 
-The frontend assessment routes are:
+```bash
+npm run build   # outputs to frontend/dist
+```
 
-https://pathwise-ai-frontend.onrender.com/assessment/assessment-sql
+### 5. (Optional) Local PostgreSQL via Docker
 
-https://pathwise-ai-frontend.onrender.com/assessment/assessment-python
+```bash
+docker compose up -d      # start
+docker compose ps         # check status
+docker compose down       # stop
+```
 
-https://pathwise-ai-frontend.onrender.com/assessment/assessment-react
+---
 
-https://pathwise-ai-frontend.onrender.com/assessment/assessment-ml
+## 🔐 Environment Variables
 
-https://pathwise-ai-frontend.onrender.com/assessment/assessment-statistics
-🤖 AI Components
+Copy `.env.example` to `.env` and set:
 
-The backend contains dedicated AI modules for different parts of the learning system.
-
-backend/app/ai/
-
-Important components include:
-
-Module	Purpose
-gemini_client.py	Communication with Gemini API
-profile_extractor.py	Learner profile processing
-skill_gap.py	Skill gap analysis
-recommender.py	Learning recommendations
-roadmap_generator.py	Learning roadmap generation
-adaptive_engine.py	Adaptive learning logic
-tutor.py	AI tutor functionality
-explanation.py	Recommendation explanations
-🗄️ Database
-
-PathWise AI uses:
-
-PostgreSQL + pgvector
-
-The deployed application uses a PostgreSQL database hosted through Neon.
-
-The database connection is configured through environment variables.
-
-🔐 Environment Variables
-
-Create a local .env file using .env.example.
-
-Example:
-
+```
 DATABASE_URL=your_database_url
 GEMINI_API_KEY=your_gemini_api_key
 SECRET_KEY=your_secret_key
+```
 
-Use the exact environment variable names expected by the application.
+> ⚠️ **Never commit your actual `.env` file.** Only `.env.example` (with placeholder values) should be tracked in version control.
 
-Important
+---
 
-Never commit the actual .env file containing secrets.
+## 🤖 AI Components
 
-The repository should only contain:
+Located in `backend/app/ai/`:
 
-.env.example
+| Module | Purpose |
+|---|---|
+| `gemini_client.py` | Communication with the Gemini API |
+| `profile_extractor.py` | Learner profile processing |
+| `skill_gap.py` | Skill gap analysis |
+| `recommender.py` | Learning recommendations |
+| `roadmap_generator.py` | Roadmap generation |
+| `adaptive_engine.py` | Adaptive learning logic |
+| `tutor.py` | AI tutor functionality |
+| `explanation.py` | Recommendation explanations |
 
-with placeholder values.
+---
 
-💻 Local Development
-Prerequisites
+## 🧪 Testing Checklist
 
-Install the following:
+<details>
+<summary>Click to expand manual QA checklist</summary>
 
-Git
-Node.js 20+
-Python 3.12+
-PostgreSQL or Neon PostgreSQL
-A Gemini API key
+**Authentication**
+- [ ] Registration works
+- [ ] Login works
+- [ ] Invalid credentials handled correctly
 
-Docker is optional if PostgreSQL is being run locally through Docker.
+**Onboarding**
+- [ ] User can complete onboarding
+- [ ] Career goal can be selected
+- [ ] Profile is saved
 
-1. Clone the Repository
-git clone https://github.com/AIDAPUGANESH2006/AI-Powered-Personalized-Learning-Path-Recommender.git
+**Learning Path**
+- [ ] Skill-gap info displays correctly
+- [ ] Recommendations generate
+- [ ] Roadmap displays
+- [ ] Course completion works
+- [ ] Prerequisite progression works
 
-Enter the project:
+**Assessments**
+- [ ] Assessment page opens
+- [ ] Questions display
+- [ ] Answers can be selected
+- [ ] Score calculates correctly
+- [ ] Results display
 
-cd AI-Powered-Personalized-Learning-Path-Recommender
-2. Configure Environment
+**AI**
+- [ ] AI features work when Gemini API key is configured
+- [ ] AI Tutor is accessible
+- [ ] AI explanations/recommendations work
 
-Create .env from .env.example.
+**Dashboard**
+- [ ] Progress displays
+- [ ] Learning activities are visible
+- [ ] User info displays
 
-Windows
-copy .env.example .env
+</details>
 
-Then open .env and configure the required values.
+---
 
-3. Backend Setup
+## 🌐 Deployment
 
-Open a terminal and enter:
+Deployed on **Render**:
 
-cd backend
+- **Frontend** — https://pathwise-ai-frontend.onrender.com (React + Vite + TypeScript + Tailwind, built via `npm run build`, served from `dist/`)
+- **Backend** — https://pathwise-ai-backend-knn1.onrender.com (Python 3.12 + FastAPI, served via `uvicorn app.main:app --host 0.0.0.0 --port $PORT`)
 
-Create a Python virtual environment:
+During local dev, the frontend proxies `/api` requests to the backend via the Vite config. In production, the deployed frontend talks directly to the deployed backend.
 
-python -m venv .venv
+---
 
-Activate it:
+## 📦 Submission Package
 
-.\.venv\Scripts\Activate.ps1
+**Include:**
+```
+backend/  frontend/  data/  docs/  .env.example  README.md  docker-compose.yml  start-dev.bat
+```
 
-Install dependencies:
+**Exclude:**
+```
+.env  .venv/  node_modules/  dist/  .git/  __pycache__/
+```
 
-pip install -r requirements.txt
+---
 
-Start the backend:
+## 🤝 Contributing
 
-python run.py
+Contributions, issues, and feature requests are welcome.
 
-Alternatively:
+1. Fork the repo
+2. Create a feature branch (`git checkout -b feature/your-feature`)
+3. Commit your changes
+4. Push to the branch and open a Pull Request
 
-uvicorn app.main:app --reload --port 8000
-4. Backend Verification
+---
 
-Once the backend is running, check:
+## 📄 License
 
-http://localhost:8000/api/health
+*Add your chosen license here (e.g. MIT, Apache 2.0). If unlicensed, state that explicitly so others know the reuse terms.*
 
-The API documentation is available at:
+---
 
-http://localhost:8000/docs
+## 👨‍💻 About
 
-The /docs page provides an interactive Swagger API interface.
-
-5. Frontend Setup
-
-Open another terminal.
-
-From the project root:
-
-cd frontend
-
-Install dependencies:
-
-npm install
-
-Start the development server:
-
-npm run dev
-
-Open the URL displayed by Vite.
-
-Usually:
-
-http://localhost:5173
-6. Frontend Production Build
-
-To verify that the frontend can be built for production:
-
-npm run build
-
-The generated production files will be created in the dist directory.
-
-🐳 Optional Local PostgreSQL Using Docker
-
-If you prefer to run PostgreSQL locally and the project Docker configuration is available:
-
-docker compose up -d
-
-Check the containers:
-
-docker compose ps
-
-Stop the containers:
-
-docker compose down
-🌐 Deployment
-
-The application is deployed using Render.
-
-Frontend
-https://pathwise-ai-frontend.onrender.com
-Backend
-https://pathwise-ai-backend-knn1.onrender.com
-API Documentation
-https://pathwise-ai-backend-knn1.onrender.com/docs
-🚀 Deployment Configuration
-Backend
-
-The backend uses:
-
-Python 3.12
-FastAPI
-Uvicorn
-
-The production server command is:
-
-uvicorn app.main:app --host 0.0.0.0 --port $PORT
-
-The backend dependencies are defined in:
-
-backend/requirements.txt
-
-Python runtime configuration:
-
-backend/runtime.txt
-Frontend
-
-The frontend uses:
-
-React
-Vite
-TypeScript
-Tailwind CSS
-
-Install dependencies:
-
-npm install
-
-Build:
-
-npm run build
-
-The production build is generated in:
-
-dist/
-🔗 API Communication
-
-During local development, the frontend communicates with the backend using the Vite configuration.
-
-The API proxy is configured for:
-
-/api
-
-The deployed frontend communicates with the deployed backend.
-
-Backend:
-
-https://pathwise-ai-backend-knn1.onrender.com
-🧪 Testing Checklist
-
-After starting the application, verify the following:
-
-Authentication
- Registration works
- Login works
- Invalid credentials are handled correctly
-Onboarding
- User can complete onboarding
- Career goal can be selected
- User profile is saved
-Learning Path
- Skill-gap information is displayed
- Recommendations are generated
- Roadmap is displayed
- Course completion works
- Prerequisite progression works
-Assessments
- Assessment page opens
- Questions are displayed
- Answers can be selected
- Score is calculated
- Results are displayed
-AI
- AI-powered features work when Gemini API is configured
- AI Tutor is accessible
- AI explanations/recommendations work
-Dashboard
- Progress is displayed
- Learning activities are visible
- User information is displayed
-📌 Important Notes
-Environment Variables
-
-The project requires environment configuration for services such as the database and Gemini API.
-
-Do not commit real API keys, passwords, or secret values.
-
-Database
-
-Database-dependent functionality requires a valid PostgreSQL database connection.
-
-For local execution, configure:
-
-DATABASE_URL=your_database_url
-Gemini API
-
-AI functionality requires a valid Gemini API key.
-
-Configure:
-
-GEMINI_API_KEY=your_gemini_api_key
-🔒 Files That Should Not Be Committed
-
-The following should normally remain outside the submitted source package:
-
-.env
-.venv/
-node_modules/
-frontend/dist/
-__pycache__/
-.git/
-
-The .env.example file should be included so that another developer can understand the required configuration.
-
-📦 Submission Package
-
-The source-code submission should contain:
-
-backend/
-frontend/
-data/
-docs/
-.env.example
-README.md
-docker-compose.yml
-start-dev.bat
-
-It should not contain:
-
-.env
-.venv/
-node_modules/
-dist/
-.git/
-👨‍💻 Project Development
-
-PathWise AI was developed as an HCL AMPlified project to demonstrate an AI-driven approach to personalized learning.
-
-The project combines:
-
-Full-stack web development
-REST API development
-Authentication
-Relational database management
-Vector database capabilities
-AI integration
-Skill-gap analysis
-Recommendation systems
-Adaptive learning
-Interactive assessments
-Learning roadmap generation
-🎓 Expected User Journey
-
-A typical learner journey is:
-
-1. Open PathWise AI
-        ↓
-2. Register
-        ↓
-3. Login
-        ↓
-4. Complete onboarding
-        ↓
-5. Define career goal
-        ↓
-6. Analyze current skills
-        ↓
-7. Identify skill gaps
-        ↓
-8. Receive recommendations
-        ↓
-9. Follow personalized roadmap
-        ↓
-10. Complete learning modules
-        ↓
-11. Take assessments
-        ↓
-12. Review results
-        ↓
-13. Adapt learning path
-        ↓
-14. Use AI Tutor
-        ↓
-15. Track progress
-🏆 Project Objective
-
-The primary objective of PathWise AI is to provide learners with a structured, personalized, and adaptive learning experience.
-
-Rather than providing the same learning content to every learner, the platform attempts to determine:
-
-What does the learner know?
-            ↓
-What does the learner want to become?
-            ↓
-What skills are missing?
-            ↓
-What should the learner learn first?
-            ↓
-What should the learner learn next?
-            ↓
-How is the learner performing?
-            ↓
-How should the learning path adapt?
-
-This approach creates a more personalized learning journey based on the learner's goals, skills, progress, and assessment performance.
-
-📞 Project Links
-Resource	Link
-GitHub Repository	https://github.com/AIDAPUGANESH2006/AI-Powered-Personalized-Learning-Path-Recommender
-Live Frontend	https://pathwise-ai-frontend.onrender.com
-Backend API	https://pathwise-ai-backend-knn1.onrender.com
-API Documentation	https://pathwise-ai-backend-knn1.onrender.com/docs
+PathWise AI was developed as an **HCL AMPlified** project, combining full-stack web development, REST API design, authentication, relational + vector database management, AI integration, skill-gap analysis, recommendation systems, adaptive learning, and interactive assessments into one platform.

@@ -265,24 +265,26 @@ export default function DashboardPage() {
         )}
 
         {/* Quick nav */}
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-5">
           {[
-            { label: 'Roadmap',       to: '/roadmap',   icon: <Target className="h-4 w-4" /> },
-            { label: 'Courses',       to: '/courses',   icon: <BookOpen className="h-4 w-4" /> },
-            { label: 'Skill Gap',     to: '/skill-gap', icon: <TrendingUp className="h-4 w-4" /> },
-            { label: 'AI Tutor',      to: '/tutor',     icon: <Zap className="h-4 w-4" /> },
+            { label: 'Roadmap',       to: '/roadmap',     icon: <Target className="h-4 w-4" /> },
+            { label: 'Courses',       to: '/courses',     icon: <BookOpen className="h-4 w-4" /> },
+            { label: 'Assessments',   to: '/assessments', icon: <ClipboardList className="h-4 w-4" /> },
+            { label: 'Skill Gap',     to: '/skill-gap',   icon: <TrendingUp className="h-4 w-4" /> },
+            { label: 'AI Tutor',      to: '/tutor',       icon: <Zap className="h-4 w-4" /> },
           ].map(nav => (
             <button
               key={nav.to}
               type="button"
               onClick={() => navigate(nav.to)}
-              className="flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-slate-700 shadow-sm transition hover:bg-indigo-50 hover:border-indigo-200 hover:text-indigo-700"
+              className="flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-3 py-3 text-xs sm:text-sm font-medium text-slate-700 shadow-sm transition hover:bg-indigo-50 hover:border-indigo-200 hover:text-indigo-700"
             >
               {nav.icon}
               {nav.label}
             </button>
           ))}
         </div>
+
       </div>
     </div>
   )

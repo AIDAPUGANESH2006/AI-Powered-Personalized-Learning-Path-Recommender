@@ -60,9 +60,9 @@ export default function RoadmapPage() {
       if (rm) {
         setRoadmap(rm)
         setPacing(rm.pacing_mode)
-        // Expand active phase by default
-        const activeItem = rm.items.find(i => i.status === 'active')
-        if (activeItem) setExpandedPhases(new Set([activeItem.phase_label]))
+        // Expand all phases by default so everything is visible
+        const allPhases = new Set(rm.items.map(i => i.phase_label))
+        setExpandedPhases(allPhases)
       }
       if (!rm && profile?.target_career_role_id) setSelectedRole(profile.target_career_role_id)
     }).finally(() => setLoading(false))
@@ -74,8 +74,8 @@ export default function RoadmapPage() {
     try {
       const rm = await generateRoadmap(selectedRole, pacing)
       setRoadmap(rm)
-      const activeItem = rm.items.find(i => i.status === 'active')
-      if (activeItem) setExpandedPhases(new Set([activeItem.phase_label]))
+      const allPhases = new Set(rm.items.map(i => i.phase_label))
+      setExpandedPhases(allPhases)
     } catch (e) { setError((e as Error).message) }
     finally { setGenerating(false) }
   }
@@ -100,16 +100,37 @@ export default function RoadmapPage() {
     })
   }
 
+  function toggleAllPhases() {
+    if (!roadmap) return
+    const all = new Set(roadmap.items.map(i => i.phase_label))
+    if (expandedPhases.size === all.size) {
+      setExpandedPhases(new Set())
+    } else {
+      setExpandedPhases(all)
+    }
+  }
+
   if (loading) return <LoadingState />
 
   return (
     <div className="min-h-screen bg-slate-50 px-4 py-8">
       <div className="mx-auto max-w-3xl">
-        <div className="mb-6">
-          <h1 className="text-2xl font-bold text-slate-900">Learning Roadmap</h1>
-          <p className="mt-1 text-sm text-slate-500">
-            Your prerequisite-aware path to career readiness.
-          </p>
+        <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <h1 className="text-2xl font-bold text-slate-900">Learning Roadmap</h1>
+            <p className="mt-1 text-sm text-slate-500">
+              Your prerequisite-aware path to career readiness.
+            </p>
+          </div>
+          {roadmap && (
+            <button
+              type="button"
+              onClick={toggleAllPhases}
+              className="rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-xs font-medium text-slate-600 hover:bg-slate-50"
+            >
+              {expandedPhases.size > 0 ? 'Collapse all' : 'Expand all'}
+            </button>
+          )}
         </div>
 
         {error && <div className="mb-4 rounded-xl bg-red-50 p-4 text-sm text-red-700">{error}</div>}
@@ -227,42 +248,70 @@ function RoadmapRow({
   onStartAssessment: () => void
 }) {
   return (
-    <div className={`flex items-center gap-3 rounded-lg border px-3 py-3 my-1.5 transition ${STATUS_STYLES[item.status]}`}>
-      <div className={`flex-shrink-0 ${item.status === 'locked' ? 'text-slate-300' : item.status === 'complete' ? 'text-emerald-500' : 'text-indigo-500'}`}>
-        {item.status === 'locked'   ? <Lock className="h-4 w-4" /> :
+    <div
+      className={`flex items-center gap-3 rounded-lg border px-3 py-3 my-1.5 transition ${STATUS_STYLES[item.status]} cursor-pointer hover:border-indigo-400 hover:shadow-sm`}
+      onClick={onStartAssessment}
+      title="Click to take quiz questions for this module"
+    >
+      <div className={`flex-shrink-0 ${item.status === 'locked' ? 'text-slate-400' : item.status === 'complete' ? 'text-emerald-500' : 'text-indigo-500'}`}>
+        {item.status === 'locked'   ? <Lock className="h-4 w-4 text-slate-300" /> :
          item.status === 'complete' ? <CheckCircle2 className="h-4 w-4" /> :
          ITEM_ICON[item.item_type] ?? <BookOpen className="h-4 w-4" />}
       </div>
 
       <div className="flex-1 min-w-0">
-        <p className="truncate text-sm font-medium text-slate-800">{item.title}</p>
+        <div className="flex items-center gap-2">
+          <p className="truncate text-sm font-semibold text-slate-800">{item.title}</p>
+          <span className="rounded bg-indigo-50 px-2 py-0.5 text-[10px] font-bold text-indigo-700">
+            Quiz & Assessment
+          </span>
+        </div>
         <p className="text-xs text-slate-400">
-          Wk {item.week_start}–{item.week_end} · {item.item_type}
+          Wk {item.week_start}–{item.week_end} · {item.item_type} · 10 assessment questions
         </p>
       </div>
 
-      {item.status === 'active' && (
-        item.item_type === 'assessment' ? (
+      {item.status === 'active' ? (
+        <div className="flex items-center gap-2">
           <button
             type="button"
-            onClick={onStartAssessment}
-            className="flex-shrink-0 rounded-lg bg-indigo-600 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-indigo-700"
+            onClick={e => { e.stopPropagation(); onStartAssessment() }}
+            className="flex-shrink-0 inline-flex items-center gap-1 rounded-lg bg-indigo-600 px-3.5 py-1.5 text-xs font-semibold text-white transition hover:bg-indigo-700 shadow-sm"
           >
-            Take quiz
+            <Zap className="h-3.5 w-3.5" />
+            Take Quiz
           </button>
-        ) : (
           <button
             type="button"
-            onClick={onComplete}
-            className="flex-shrink-0 rounded-lg border border-emerald-300 bg-white px-3 py-1.5 text-xs font-semibold text-emerald-700 transition hover:bg-emerald-50"
+            onClick={e => { e.stopPropagation(); onComplete() }}
+            className="flex-shrink-0 rounded-lg border border-emerald-300 bg-white px-2.5 py-1.5 text-xs font-medium text-emerald-700 transition hover:bg-emerald-50"
+            title="Mark complete without quiz"
           >
             Mark done
           </button>
-        )
+        </div>
+      ) : item.status === 'complete' ? (
+        <button
+          type="button"
+          onClick={e => { e.stopPropagation(); onStartAssessment() }}
+          className="flex-shrink-0 rounded-lg border border-slate-300 bg-white px-2.5 py-1 text-xs font-medium text-slate-700 transition hover:bg-slate-50"
+        >
+          Retake Quiz
+        </button>
+      ) : (
+        <button
+          type="button"
+          onClick={e => { e.stopPropagation(); onStartAssessment() }}
+          className="flex-shrink-0 rounded-lg border border-indigo-200 bg-white px-2.5 py-1 text-xs font-medium text-indigo-600 transition hover:bg-indigo-50"
+        >
+          Practice Quiz
+        </button>
       )}
     </div>
   )
 }
+
+
 
 function PacingSelector({ value, onChange, compact = false }: {
   value: string; onChange: (v: string) => void; compact?: boolean

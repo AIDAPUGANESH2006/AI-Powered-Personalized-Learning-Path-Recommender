@@ -1,204 +1,68 @@
 [
   {
-    "id": "assessment-python",
-    "title": "Python Fundamentals Quiz",
-    "skill_id": "python",
+    "id": "assessment-html-css",
+    "title": "Modern HTML & CSS Quiz",
+    "skill_id": "html_css",
     "pass_threshold": 0.6,
     "questions": [
       {
         "id": "q1",
-        "question": "Which keyword defines a function in Python?",
-        "options": ["func", "def", "function", "lambda"],
+        "question": "Which HTML5 element represents self-contained content, such as a blog post or news story?",
+        "options": ["<section>", "<article>", "<aside>", "<div>"],
         "correct_index": 1
       },
       {
         "id": "q2",
-        "question": "What is the output type of type([])?",
-        "options": ["tuple", "list", "dict", "set"],
-        "correct_index": 1
-      },
-      {
-        "id": "q3",
-        "question": "Which method adds an item to the end of a list?",
-        "options": ["add()", "push()", "append()", "insert_end()"],
+        "question": "In the standard CSS Box Model, which layer is outermost?",
+        "options": ["Border", "Padding", "Margin", "Content"],
         "correct_index": 2
       },
       {
+        "id": "q3",
+        "question": "Which CSS Flexbox property aligns flex items along the main axis?",
+        "options": ["align-items", "justify-content", "align-content", "flex-direction"],
+        "correct_index": 1
+      },
+      {
         "id": "q4",
-        "question": "What does 'import math' allow you to use?",
-        "options": ["Math module functions", "Only constants", "GUI widgets", "Database drivers"],
+        "question": "Which CSS selector has the highest specificity?",
+        "options": ["#nav .link", ".header nav a", "a:hover", "div > p.highlight"],
         "correct_index": 0
       },
       {
         "id": "q5",
-        "question": "Which loop iterates over a sequence in Python?",
-        "options": ["loop", "for", "repeat", "iterate"],
+        "question": "What is the purpose of the 'viewport' meta tag in responsive HTML design?",
+        "options": ["To load web fonts dynamically", "To control layout viewport dimensions and scaling on mobile devices", "To enable GPU-accelerated CSS animations", "To set browser cache expiration headers"],
         "correct_index": 1
       },
       {
         "id": "q6",
-        "question": "What is a dictionary keyed by?",
-        "options": ["Index only", "Hashable keys", "Floating values", "Tuples only"],
-        "correct_index": 1
-      },
-      {
-        "id": "q7",
-        "question": "Which operator checks equality?",
-        "options": ["=", "==", "===", "eq"],
-        "correct_index": 1
-      },
-      {
-        "id": "q8",
-        "question": "What does len('abc') return?",
-        "options": ["2", "3", "4", "Error"],
-        "correct_index": 1
-      },
-      {
-        "id": "q9",
-        "question": "Which keyword handles exceptions?",
-        "options": ["catch", "handle", "except", "error"],
+        "question": "Which CSS position value positions an element relative to the viewport, keeping it visible when scrolling?",
+        "options": ["relative", "absolute", "fixed", "static"],
         "correct_index": 2
       },
       {
-        "id": "q10",
-        "question": "List comprehension syntax is written with:",
-        "options": ["Curly braces", "Square brackets", "Parentheses only", "Angle brackets"],
-        "correct_index": 1
-      }
-    ]
-  },
-  {
-    "id": "assessment-statistics",
-    "title": "Statistics Essentials Quiz",
-    "skill_id": "statistics",
-    "pass_threshold": 0.6,
-    "questions": [
-      {
-        "id": "q1",
-        "question": "The mean is sensitive to:",
-        "options": ["Sample size", "Outliers", "Units", "Random seed"],
-        "correct_index": 1
-      },
-      {
-        "id": "q2",
-        "question": "A p-value below 0.05 typically indicates:",
-        "options": ["No effect", "Statistical significance", "Perfect correlation", "Large sample"],
-        "correct_index": 1
-      },
-      {
-        "id": "q3",
-        "question": "Standard deviation measures:",
-        "options": ["Central tendency", "Spread", "Skew only", "Correlation"],
-        "correct_index": 1
-      },
-      {
-        "id": "q4",
-        "question": "Normal distribution is characterized by:",
-        "options": ["Two peaks", "Bell shape", "Uniform density", "No variance"],
-        "correct_index": 1
-      },
-      {
-        "id": "q5",
-        "question": "Correlation measures:",
-        "options": ["Causation", "Linear association", "Variance", "Median shift"],
-        "correct_index": 1
-      },
-      {
-        "id": "q6",
-        "question": "A confidence interval estimates:",
-        "options": ["Population parameter range", "Exact population value", "Sample size", "P-value"],
-        "correct_index": 0
-      },
-      {
         "id": "q7",
-        "question": "The median is the:",
-        "options": ["Most frequent value", "Middle value", "Maximum value", "Range midpoint always"],
+        "question": "What does the 'rem' CSS unit calculate its size relative to?",
+        "options": ["The immediate parent element's font-size", "The root (<html>) element's font-size", "The viewport width", "The line-height of the current element"],
         "correct_index": 1
       },
       {
         "id": "q8",
-        "question": "Type I error is:",
-        "options": ["False negative", "False positive", "Correct rejection", "Power loss only"],
-        "correct_index": 1
+        "question": "Which CSS Grid property specifies the number and size of columns in a grid container?",
+        "options": ["grid-template-columns", "grid-auto-flow", "grid-column-gap", "grid-area"],
+        "correct_index": 0
       },
       {
         "id": "q9",
-        "question": "Variance is the square of:",
-        "options": ["Mean", "Standard deviation", "Median", "Mode"],
+        "question": "What is the primary accessibility purpose of the 'alt' attribute on <img> tags?",
+        "options": ["Provides tooltip text on hover", "Provides text alternatives for screen readers and when images fail to load", "Improves image compression speeds", "Sets the fallback file format"],
         "correct_index": 1
       },
       {
         "id": "q10",
-        "question": "Bayes' theorem updates:",
-        "options": ["Prior with evidence", "Sample mean", "Variance only", "Histogram bins"],
-        "correct_index": 0
-      }
-    ]
-  },
-  {
-    "id": "assessment-ml",
-    "title": "Machine Learning Fundamentals Quiz",
-    "skill_id": "machine_learning",
-    "pass_threshold": 0.6,
-    "questions": [
-      {
-        "id": "q1",
-        "question": "Supervised learning uses:",
-        "options": ["Unlabeled data only", "Labeled data", "No training", "Random labels"],
-        "correct_index": 1
-      },
-      {
-        "id": "q2",
-        "question": "Overfitting means the model:",
-        "options": ["Generalizes well", "Memorizes training noise", "Has high bias only", "Uses too little data always"],
-        "correct_index": 1
-      },
-      {
-        "id": "q3",
-        "question": "Cross-validation helps estimate:",
-        "options": ["Training time", "Generalization performance", "Feature names", "Database size"],
-        "correct_index": 1
-      },
-      {
-        "id": "q4",
-        "question": "Logistic regression is used for:",
-        "options": ["Clustering", "Classification", "Dimensionality only", "Time series only"],
-        "correct_index": 1
-      },
-      {
-        "id": "q5",
-        "question": "A decision tree splits data to reduce:",
-        "options": ["Impurity or error", "Dataset size", "Feature count", "Learning rate"],
-        "correct_index": 0
-      },
-      {
-        "id": "q6",
-        "question": "Regularization reduces:",
-        "options": ["Underfitting always", "Overfitting", "Label noise", "Inference speed only"],
-        "correct_index": 1
-      },
-      {
-        "id": "q7",
-        "question": "Precision measures:",
-        "options": ["True positives among predicted positives", "All positives found", "Accuracy on negatives", "F1 only"],
-        "correct_index": 0
-      },
-      {
-        "id": "q8",
-        "question": "Gradient descent optimizes by:",
-        "options": ["Random search", "Following loss gradients", "Grid search only", "Label smoothing"],
-        "correct_index": 1
-      },
-      {
-        "id": "q9",
-        "question": "K-means is an example of:",
-        "options": ["Supervised learning", "Unsupervised clustering", "Reinforcement learning", "Ensemble boosting"],
-        "correct_index": 1
-      },
-      {
-        "id": "q10",
-        "question": "A confusion matrix shows:",
-        "options": ["Feature importances", "Prediction vs actual counts", "Learning curves", "Hyperparameters"],
+        "question": "Which CSS rule defines keyframes for animations?",
+        "options": ["@animation", "@keyframes", "@transition", "@transform"],
         "correct_index": 1
       }
     ]
@@ -272,8 +136,144 @@
     ]
   },
   {
+    "id": "assessment-python",
+    "title": "Python Fundamentals Quiz",
+    "skill_id": "python",
+    "pass_threshold": 0.6,
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Which keyword defines a function in Python?",
+        "options": ["func", "def", "function", "lambda"],
+        "correct_index": 1
+      },
+      {
+        "id": "q2",
+        "question": "What is the output type of type([])?",
+        "options": ["tuple", "list", "dict", "set"],
+        "correct_index": 1
+      },
+      {
+        "id": "q3",
+        "question": "Which method adds an item to the end of a list?",
+        "options": ["add()", "push()", "append()", "insert_end()"],
+        "correct_index": 2
+      },
+      {
+        "id": "q4",
+        "question": "What does 'import math' allow you to use?",
+        "options": ["Math module functions", "Only constants", "GUI widgets", "Database drivers"],
+        "correct_index": 0
+      },
+      {
+        "id": "q5",
+        "question": "Which loop iterates over a sequence in Python?",
+        "options": ["loop", "for", "repeat", "iterate"],
+        "correct_index": 1
+      },
+      {
+        "id": "q6",
+        "question": "What is a dictionary keyed by?",
+        "options": ["Index only", "Hashable keys", "Floating values", "Tuples only"],
+        "correct_index": 1
+      },
+      {
+        "id": "q7",
+        "question": "Which operator checks equality?",
+        "options": ["=", "==", "===", "eq"],
+        "correct_index": 1
+      },
+      {
+        "id": "q8",
+        "question": "What does len('abc') return?",
+        "options": ["2", "3", "4", "Error"],
+        "correct_index": 1
+      },
+      {
+        "id": "q9",
+        "question": "Which keyword handles exceptions?",
+        "options": ["catch", "handle", "except", "error"],
+        "correct_index": 2
+      },
+      {
+        "id": "q10",
+        "question": "List comprehension syntax is written with:",
+        "options": ["Curly braces", "Square brackets", "Parentheses only", "Angle brackets"],
+        "correct_index": 1
+      }
+    ]
+  },
+  {
+    "id": "assessment-javascript",
+    "title": "JavaScript Essentials Quiz",
+    "skill_id": "javascript",
+    "pass_threshold": 0.6,
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is the key difference between 'let' and 'var' in modern JavaScript?",
+        "options": ["'let' is function-scoped while 'var' is block-scoped", "'let' is block-scoped while 'var' is function-scoped", "'let' cannot be reassigned", "'var' is hoisted to global object only"],
+        "correct_index": 1
+      },
+      {
+        "id": "q2",
+        "question": "Which array method creates a new array with elements that pass a test function?",
+        "options": ["map()", "filter()", "reduce()", "forEach()"],
+        "correct_index": 1
+      },
+      {
+        "id": "q3",
+        "question": "How do arrow functions handle the 'this' keyword compared to standard functions?",
+        "options": ["Arrow functions bind 'this' dynamically at runtime", "Arrow functions inherit 'this' lexically from enclosing scope", "Arrow functions set 'this' to undefined always", "Arrow functions create a new 'this' prototype"],
+        "correct_index": 1
+      },
+      {
+        "id": "q4",
+        "question": "What does 'Promise.all()' do when one of the passed promises rejects?",
+        "options": ["Resolves with partial results", "Immediately rejects with the reason of the first rejected promise", "Retries the failed promise up to 3 times", "Ignores the rejection and resolves the rest"],
+        "correct_index": 1
+      },
+      {
+        "id": "q5",
+        "question": "In the JavaScript Event Loop, where are Promise resolution callbacks placed?",
+        "options": ["Macrotask Queue", "Microtask Queue", "Call Stack directly", "Worker Thread"],
+        "correct_index": 1
+      },
+      {
+        "id": "q6",
+        "question": "What is a closure in JavaScript?",
+        "options": ["A function that takes no parameters", "A function bundled together with references to its lexical environment", "A loop that terminates automatically", "A method to close network connections"],
+        "correct_index": 1
+      },
+      {
+        "id": "q7",
+        "question": "Which operator performs shallow cloning or object property spreading?",
+        "options": ["...", "::", "->", "&&"],
+        "correct_index": 0
+      },
+      {
+        "id": "q8",
+        "question": "What is the return value of 'typeof null' in JavaScript?",
+        "options": ["'null'", "'undefined'", "'object'", "'boolean'"],
+        "correct_index": 2
+      },
+      {
+        "id": "q9",
+        "question": "Which statement handles asynchronous errors when using 'async/await'?",
+        "options": ["try ... catch", "catchAsync()", "defer ... rescue", "onError()"],
+        "correct_index": 0
+      },
+      {
+        "id": "q10",
+        "question": "What is event bubbling in the browser DOM?",
+        "options": ["Events travel from window down to target", "Events propagate upward from the innermost target element to its parents", "Events cancel all listeners automatically", "Events trigger background web workers"],
+        "correct_index": 1
+      }
+    ]
+  },
+  {
     "id": "assessment-react",
-    "title": "React Essentials Quiz",
+    "title": "React Complete Guide Quiz",
     "skill_id": "react",
     "pass_threshold": 0.6,
     "questions": [
@@ -336,6 +336,1026 @@
         "question": "StrictMode in development:",
         "options": ["Disables hooks", "Highlights potential problems", "Removes warnings", "Builds production bundle"],
         "correct_index": 1
+      }
+    ]
+  },
+  {
+    "id": "assessment-nodejs",
+    "title": "Node.js & Backend Development Quiz",
+    "skill_id": "nodejs",
+    "pass_threshold": 0.6,
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is the primary purpose of Express middleware functions?",
+        "options": ["To compile TypeScript to JS", "To access request/response objects and end or modify the HTTP cycle", "To render CSS stylesheets", "To optimize CPU multi-threading"],
+        "correct_index": 1
+      },
+      {
+        "id": "q2",
+        "question": "Which HTTP status code signifies that a resource was successfully created?",
+        "options": ["200 OK", "201 Created", "204 No Content", "304 Not Modified"],
+        "correct_index": 1
+      },
+      {
+        "id": "q3",
+        "question": "What makes an HTTP method idempotent in REST API design?",
+        "options": ["Calling it multiple times produces the same server state as calling it once", "It runs synchronously on the main thread", "It requires no authentication headers", "It returns JSON exclusively"],
+        "correct_index": 0
+      },
+      {
+        "id": "q4",
+        "question": "Which built-in Node.js module is used to handle file system operations?",
+        "options": ["http", "path", "fs", "os"],
+        "correct_index": 2
+      },
+      {
+        "id": "q5",
+        "question": "What does a JSON Web Token (JWT) consist of?",
+        "options": ["Username, Password, Salt", "Header, Payload, Signature", "Public Key, Private Key, IV", "Cookie, Session ID, Timestamp"],
+        "correct_index": 1
+      },
+      {
+        "id": "q6",
+        "question": "Why is database connection pooling important in high-traffic Node.js servers?",
+        "options": ["Reuses open database connections rather than opening and closing them per request", "Converts relational tables to document collections", "Encrypts all SQL queries automatically", "Bypasses database authentication"],
+        "correct_index": 0
+      },
+      {
+        "id": "q7",
+        "question": "What is the role of CORS in web API development?",
+        "options": ["Compresses response payloads", "Controls which origin domains are permitted to access server resources from browsers", "Encrypts server-to-server websockets", "Manages database migration schemas"],
+        "correct_index": 1
+      },
+      {
+        "id": "q8",
+        "question": "What happens when 'next(err)' is called in an Express route handler?",
+        "options": ["Terminates the Node process", "Passes control to the dedicated Express error-handling middleware", "Restarts the HTTP server", "Retries the incoming request"],
+        "correct_index": 1
+      },
+      {
+        "id": "q9",
+        "question": "Where should sensitive secrets like API keys and database passwords be stored in Node.js apps?",
+        "options": ["Hardcoded in Git commits", "Environment variables (.env files loaded via process.env)", "In public JSON files", "Inside client-side cookies"],
+        "correct_index": 1
+      },
+      {
+        "id": "q10",
+        "question": "Which Node.js feature enables streaming large files with minimal RAM consumption?",
+        "options": ["Readable / Writable Streams and pipe()", "Buffer.allocUnsafe()", "JSON.stringify()", "Worker threads with IPC"],
+        "correct_index": 0
+      }
+    ]
+  },
+  {
+    "id": "assessment-cloud",
+    "title": "Cloud Computing Fundamentals Quiz",
+    "skill_id": "cloud_fundamentals",
+    "pass_threshold": 0.6,
+    "questions": [
+      {
+        "id": "q1",
+        "question": "In the Cloud Computing service model hierarchy, what does PaaS provide?",
+        "options": ["Raw virtual machines and networking only (IaaS)", "A managed platform for deploying code without managing underlying OS and hardware", "End-user web applications (SaaS)", "Physical server colocation"],
+        "correct_index": 1
+      },
+      {
+        "id": "q2",
+        "question": "What is horizontal scaling (scaling out)?",
+        "options": ["Upgrading CPU and RAM on a single existing server", "Adding more server instances to distribute load", "Moving from cloud to on-premises", "Decreasing database indexes"],
+        "correct_index": 1
+      },
+      {
+        "id": "q3",
+        "question": "In the AWS/Cloud Shared Responsibility Model, what is the customer responsible for in IaaS?",
+        "options": ["Physical data center security", "Customer data, OS patches, network configuration, and firewall rules", "Server hardware disposal", "Virtualization hypervisor updates"],
+        "correct_index": 1
+      },
+      {
+        "id": "q4",
+        "question": "What is an Availability Zone (AZ)?",
+        "options": ["A continent-wide network region", "One or more discrete data centers with redundant power and networking within a region", "A public CDN edge server", "An IAM security role"],
+        "correct_index": 1
+      },
+      {
+        "id": "q5",
+        "question": "What type of storage is Amazon S3?",
+        "options": ["Block storage", "Object storage", "File system storage", "Cache only"],
+        "correct_index": 1
+      },
+      {
+        "id": "q6",
+        "question": "What security principle states that users should only receive the minimum permissions necessary for their role?",
+        "options": ["Zero Configuration", "Principle of Least Privilege", "Separation of DNS", "High Availability Protocol"],
+        "correct_index": 1
+      },
+      {
+        "id": "q7",
+        "question": "What is the main benefit of Serverless architectures (e.g. AWS Lambda)?",
+        "options": ["Zero idle cost, automatic scaling, and no server provisioning", "Fixed 24/7 dedicated hardware", "Direct control over OS kernel modules", "Faster disk I/O than SSDs"],
+        "correct_index": 0
+      },
+      {
+        "id": "q8",
+        "question": "What does a Content Delivery Network (CDN) do?",
+        "options": ["Stores database backups across regions", "Caches static and dynamic content at edge locations worldwide to reduce user latency", "Executes long-running batch jobs", "Enforces SQL schema constraints"],
+        "correct_index": 1
+      },
+      {
+        "id": "q9",
+        "question": "Which cloud network component isolates cloud resources within a private virtual network?",
+        "options": ["Virtual Private Cloud (VPC)", "API Gateway", "Elastic IP", "Direct Connect"],
+        "correct_index": 0
+      },
+      {
+        "id": "q10",
+        "question": "What is Fault Tolerance in cloud architecture?",
+        "options": ["The ability of a system to continue operating properly in the event of component failure", "The ability to run with zero memory", "Bypassing authentication on errors", "Compressing network packets"],
+        "correct_index": 0
+      }
+    ]
+  },
+  {
+    "id": "assessment-docker",
+    "title": "Docker for Developers Quiz",
+    "skill_id": "docker",
+    "pass_threshold": 0.6,
+    "questions": [
+      {
+        "id": "q1",
+        "question": "How do Docker containers differ from traditional Virtual Machines?",
+        "options": ["Containers virtualize the entire hardware including guest OS; VMs share the host kernel", "Containers share the host OS kernel and isolate at process level; VMs run a full guest OS", "Containers cannot connect to networks", "VMs are always smaller and faster to boot"],
+        "correct_index": 1
+      },
+      {
+        "id": "q2",
+        "question": "Which Dockerfile instruction sets the base image for subsequent instructions?",
+        "options": ["RUN", "FROM", "START", "BASE"],
+        "correct_index": 1
+      },
+      {
+        "id": "q3",
+        "question": "What is the purpose of Docker Volumes?",
+        "options": ["To amplify audio output", "To persist data outside the container lifecycle and share data between containers", "To increase CPU core allocation", "To compress container images"],
+        "correct_index": 1
+      },
+      {
+        "id": "q4",
+        "question": "What does the '-p 8080:80' flag do in 'docker run'?",
+        "options": ["Allocates 8080MB of RAM to the container", "Maps port 8080 on the host machine to port 80 inside the container", "Sets container priority to 80", "Limits container bandwidth"],
+        "correct_index": 1
+      },
+      {
+        "id": "q5",
+        "question": "What tool allows developers to define and run multi-container applications using a YAML file?",
+        "options": ["Docker Swarm", "Docker Compose", "Docker Hub", "Kubectl"],
+        "correct_index": 1
+      },
+      {
+        "id": "q6",
+        "question": "Which Dockerfile instruction specifies the default executable command when a container starts?",
+        "options": ["CMD / ENTRYPOINT", "BUILD", "ENV", "EXPOSE"],
+        "correct_index": 0
+      },
+      {
+        "id": "q7",
+        "question": "What is a multi-stage Docker build used for?",
+        "options": ["Creating multi-threaded containers", "Reducing final image size by copying only build artifacts from previous stages", "Running multiple operating systems simultaneously", "Backing up Docker volumes to S3"],
+        "correct_index": 1
+      },
+      {
+        "id": "q8",
+        "question": "Which command displays all running and stopped Docker containers?",
+        "options": ["docker list", "docker ps -a", "docker containers", "docker show all"],
+        "correct_index": 1
+      },
+      {
+        "id": "q9",
+        "question": "What file specifies files and directories to exclude from the Docker build context?",
+        "options": [".dockerignore", ".gitattributes", "docker-compose.yml", "Dockerfile.lock"],
+        "correct_index": 0
+      },
+      {
+        "id": "q10",
+        "question": "How do Docker images achieve fast builds and storage efficiency?",
+        "options": ["Using immutable read-only image layers cached by instruction", "Using uncompressed raw ISO disk images", "By running code only in memory without files", "By disabling file permissions"],
+        "correct_index": 0
+      }
+    ]
+  },
+  {
+    "id": "assessment-statistics",
+    "title": "Statistics Essentials Quiz",
+    "skill_id": "statistics",
+    "pass_threshold": 0.6,
+    "questions": [
+      {
+        "id": "q1",
+        "question": "The mean is sensitive to:",
+        "options": ["Sample size", "Outliers", "Units", "Random seed"],
+        "correct_index": 1
+      },
+      {
+        "id": "q2",
+        "question": "A p-value below 0.05 typically indicates:",
+        "options": ["No effect", "Statistical significance", "Perfect correlation", "Large sample"],
+        "correct_index": 1
+      },
+      {
+        "id": "q3",
+        "question": "Standard deviation measures:",
+        "options": ["Central tendency", "Spread", "Skew only", "Correlation"],
+        "correct_index": 1
+      },
+      {
+        "id": "q4",
+        "question": "Normal distribution is characterized by:",
+        "options": ["Two peaks", "Bell shape", "Uniform density", "No variance"],
+        "correct_index": 1
+      },
+      {
+        "id": "q5",
+        "question": "Correlation measures:",
+        "options": ["Causation", "Linear association", "Variance", "Median shift"],
+        "correct_index": 1
+      },
+      {
+        "id": "q6",
+        "question": "A confidence interval estimates:",
+        "options": ["Population parameter range", "Exact population value", "Sample size", "P-value"],
+        "correct_index": 0
+      },
+      {
+        "id": "q7",
+        "question": "The median is the:",
+        "options": ["Most frequent value", "Middle value", "Maximum value", "Range midpoint always"],
+        "correct_index": 1
+      },
+      {
+        "id": "q8",
+        "question": "Type I error is:",
+        "options": ["False negative", "False positive", "Correct rejection", "Power loss only"],
+        "correct_index": 1
+      },
+      {
+        "id": "q9",
+        "question": "Variance is the square of:",
+        "options": ["Mean", "Standard deviation", "Median", "Mode"],
+        "correct_index": 1
+      },
+      {
+        "id": "q10",
+        "question": "Bayes' theorem updates:",
+        "options": ["Prior with evidence", "Sample mean", "Variance only", "Histogram bins"],
+        "correct_index": 0
+      }
+    ]
+  },
+  {
+    "id": "assessment-linear-algebra",
+    "title": "Linear Algebra for ML Quiz",
+    "skill_id": "linear_algebra",
+    "pass_threshold": 0.6,
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What does the dot product of two perpendicular (orthogonal) non-zero vectors equal?",
+        "options": ["1", "0", "-1", "Infinity"],
+        "correct_index": 1
+      },
+      {
+        "id": "q2",
+        "question": "If matrix A has dimension (m × k) and matrix B has dimension (k × n), what is the dimension of the product AB?",
+        "options": ["(k × k)", "(m × n)", "(n × m)", "(m × k)"],
+        "correct_index": 1
+      },
+      {
+        "id": "q3",
+        "question": "What is an eigenvector of a square matrix A?",
+        "options": ["A vector whose direction is unchanged when multiplied by A (Av = λv)", "A vector with all elements equal to zero", "The inverse of matrix A", "A vector with magnitude equal to the matrix trace"],
+        "correct_index": 0
+      },
+      {
+        "id": "q4",
+        "question": "What does a matrix determinant equal to zero indicate?",
+        "options": ["The matrix is symmetric", "The matrix is non-invertible (singular)", "The matrix has orthogonal columns", "The matrix is the identity matrix"],
+        "correct_index": 1
+      },
+      {
+        "id": "q5",
+        "question": "What is the rank of a matrix?",
+        "options": ["Total number of elements in the matrix", "The maximum number of linearly independent rows or columns", "The trace divided by the determinant", "The largest eigenvalue"],
+        "correct_index": 1
+      },
+      {
+        "id": "q6",
+        "question": "Which matrix decomposition factors any real matrix into U Σ V^T?",
+        "options": ["LU Decomposition", "QR Decomposition", "Singular Value Decomposition (SVD)", "Cholesky Decomposition"],
+        "correct_index": 2
+      },
+      {
+        "id": "q7",
+        "question": "What is the transpose of an orthogonal matrix Q equal to?",
+        "options": ["Its inverse (Q^T = Q^-1)", "The negative matrix (-Q)", "The identity matrix (I)", "Zero"],
+        "correct_index": 0
+      },
+      {
+        "id": "q8",
+        "question": "What dimensionality reduction technique uses eigenvalues of the covariance matrix?",
+        "options": ["Principal Component Analysis (PCA)", "K-Means Clustering", "Backpropagation", "Gradient Boosting"],
+        "correct_index": 0
+      },
+      {
+        "id": "q9",
+        "question": "What is the L2 norm of vector v = [3, 4]?",
+        "options": ["7", "5", "25", "12"],
+        "correct_index": 1
+      },
+      {
+        "id": "q10",
+        "question": "What is the identity matrix I multiplied by any vector x equal to?",
+        "options": ["0", "x", "x^2", "1/x"],
+        "correct_index": 1
+      }
+    ]
+  },
+  {
+    "id": "assessment-ml",
+    "title": "Machine Learning Fundamentals Quiz",
+    "skill_id": "machine_learning",
+    "pass_threshold": 0.6,
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Supervised learning uses:",
+        "options": ["Unlabeled data only", "Labeled data", "No training", "Random labels"],
+        "correct_index": 1
+      },
+      {
+        "id": "q2",
+        "question": "Overfitting means the model:",
+        "options": ["Generalizes well", "Memorizes training noise", "Has high bias only", "Uses too little data always"],
+        "correct_index": 1
+      },
+      {
+        "id": "q3",
+        "question": "Cross-validation helps estimate:",
+        "options": ["Training time", "Generalization performance", "Feature names", "Database size"],
+        "correct_index": 1
+      },
+      {
+        "id": "q4",
+        "question": "Logistic regression is used for:",
+        "options": ["Clustering", "Classification", "Dimensionality only", "Time series only"],
+        "correct_index": 1
+      },
+      {
+        "id": "q5",
+        "question": "A decision tree splits data to reduce:",
+        "options": ["Impurity or error", "Dataset size", "Feature count", "Learning rate"],
+        "correct_index": 0
+      },
+      {
+        "id": "q6",
+        "question": "Regularization reduces:",
+        "options": ["Underfitting always", "Overfitting", "Label noise", "Inference speed only"],
+        "correct_index": 1
+      },
+      {
+        "id": "q7",
+        "question": "Precision measures:",
+        "options": ["True positives among predicted positives", "All positives found", "Accuracy on negatives", "F1 only"],
+        "correct_index": 0
+      },
+      {
+        "id": "q8",
+        "question": "Gradient descent optimizes by:",
+        "options": ["Random search", "Following loss gradients", "Grid search only", "Label smoothing"],
+        "correct_index": 1
+      },
+      {
+        "id": "q9",
+        "question": "K-means is an example of:",
+        "options": ["Supervised learning", "Unsupervised clustering", "Reinforcement learning", "Ensemble boosting"],
+        "correct_index": 1
+      },
+      {
+        "id": "q10",
+        "question": "A confusion matrix shows:",
+        "options": ["Feature importances", "Prediction vs actual counts", "Learning curves", "Hyperparameters"],
+        "correct_index": 1
+      }
+    ]
+  },
+  {
+    "id": "assessment-deep-learning",
+    "title": "Deep Learning Specialization Quiz",
+    "skill_id": "deep_learning",
+    "pass_threshold": 0.6,
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Why is ReLU (Rectified Linear Unit) widely favored over Sigmoid in deep hidden layers?",
+        "options": ["It is bounded between 0 and 1", "It mitigates the vanishing gradient problem and computes faster", "It works only on negative numbers", "It eliminates the need for backpropagation"],
+        "correct_index": 1
+      },
+      {
+        "id": "q2",
+        "question": "What algorithm computes the gradients of the loss with respect to neural network weights?",
+        "options": ["Backpropagation using Chain Rule", "Dijkstra's Algorithm", "K-Means Clustering", "Principal Component Analysis"],
+        "correct_index": 0
+      },
+      {
+        "id": "q3",
+        "question": "What is the primary function of Convolutional layers in CNNs for computer vision?",
+        "options": ["To flatten 2D images into 1D vectors", "To learn spatial hierarchies of features via local filter kernels", "To normalize inputs between 0 and 1", "To calculate classification probabilities"],
+        "correct_index": 1
+      },
+      {
+        "id": "q4",
+        "question": "What regularization technique randomly deactivates neurons during forward pass with probability p?",
+        "options": ["Dropout", "Batch Normalization", "Gradient Clipping", "Weight Tying"],
+        "correct_index": 0
+      },
+      {
+        "id": "q5",
+        "question": "Which loss function is standard for multi-class classification with softmax output?",
+        "options": ["Mean Squared Error (MSE)", "Categorical Cross-Entropy", "Hinge Loss", "Mean Absolute Error"],
+        "correct_index": 1
+      },
+      {
+        "id": "q6",
+        "question": "What makes LSTM (Long Short-Term Memory) networks superior to standard RNNs for long sequences?",
+        "options": ["Gating mechanisms (forget, input, output gates) that preserve long-term gradients", "They use convolution operations only", "They require no training epochs", "They operate without hidden states"],
+        "correct_index": 0
+      },
+      {
+        "id": "q7",
+        "question": "What is the purpose of Batch Normalization in deep neural networks?",
+        "options": ["Normalizes layer activations across mini-batches, stabilizing training and allowing higher learning rates", "Reduces dataset image resolution", "Encrypts model weights during deployment", "Converts floats to 8-bit integers"],
+        "correct_index": 0
+      },
+      {
+        "id": "q8",
+        "question": "What optimizer combines Momentum and RMSProp adaptive learning rates?",
+        "options": ["SGD", "Adam", "Adagrad", "L-BFGS"],
+        "correct_index": 1
+      },
+      {
+        "id": "q9",
+        "question": "What technique prevents exploding gradients during RNN training?",
+        "options": ["Gradient Clipping", "Increasing learning rate", "Removing bias terms", "Zero padding"],
+        "correct_index": 0
+      },
+      {
+        "id": "q10",
+        "question": "What is Transfer Learning in deep learning?",
+        "options": ["Copying weights from a model pre-trained on a large dataset to fine-tune on a target task", "Moving code from CPU to GPU", "Exporting models to ONNX format", "Translating code from PyTorch to TensorFlow"],
+        "correct_index": 0
+      }
+    ]
+  },
+  {
+    "id": "assessment-nlp",
+    "title": "Natural Language Processing Quiz",
+    "skill_id": "nlp",
+    "pass_threshold": 0.6,
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is tokenization in NLP?",
+        "options": ["Generating secret crypto keys for users", "Splitting raw text into individual words, subwords, or characters", "Converting uppercase letters to lowercase only", "Calculating word count statistics"],
+        "correct_index": 1
+      },
+      {
+        "id": "q2",
+        "question": "What is the difference between Stemming and Lemmatization?",
+        "options": ["Stemming uses a dictionary/vocabulary for valid root words; Lemmatization chops suffixes heuristically", "Stemming chops word endings heuristically; Lemmatization uses grammatical rules and vocabulary to find the true lemma", "They are identical in implementation", "Stemming is used only for code syntax"],
+        "correct_index": 1
+      },
+      {
+        "id": "q3",
+        "question": "What does TF-IDF represent in document search?",
+        "options": ["Term Frequency - Inverse Document Frequency, measuring word importance relative to a corpus", "Total Frequency - Indexed Document Formatting", "Time Frame - Input Data Feed", "Token Filtering - Integrated Data Format"],
+        "correct_index": 0
+      },
+      {
+        "id": "q4",
+        "question": "What is Word2Vec designed to capture?",
+        "options": ["Spelling errors in documents", "Dense vector representations where semantically similar words have similar embeddings", "HTML tag structures in web pages", "Exact phonetic pronunciations"],
+        "correct_index": 1
+      },
+      {
+        "id": "q5",
+        "question": "Which metric is commonly used to measure semantic similarity between two embedding vectors?",
+        "options": ["Euclidean distance only", "Cosine Similarity", "Hamming Distance", "Jaccard Index only"],
+        "correct_index": 1
+      },
+      {
+        "id": "q6",
+        "question": "What is Named Entity Recognition (NER)?",
+        "options": ["Classifying whole documents as spam or ham", "Identifying and categorizing key entities (people, organizations, locations) in text", "Generating automated captions for images", "Correcting grammar mistakes"],
+        "correct_index": 1
+      },
+      {
+        "id": "q7",
+        "question": "What does the BLEU score evaluate?",
+        "options": ["Sentiment polarity of reviews", "Quality of machine translated text compared to human reference translations", "Database indexing latency", "Token count per second"],
+        "correct_index": 1
+      },
+      {
+        "id": "q8",
+        "question": "What is Byte-Pair Encoding (BPE)?",
+        "options": ["A binary encryption standard", "A subword tokenization algorithm that iteratively merges frequent character pairs", "A compression method for audio speech", "A database encoding format"],
+        "correct_index": 1
+      },
+      {
+        "id": "q9",
+        "question": "What are stopwords in NLP pipelines?",
+        "options": ["Common words (e.g. 'the', 'is', 'at') often filtered out because they carry low distinctive semantic weight", "Punctuation marks only", "Words with spelling errors", "Reserved Python keywords"],
+        "correct_index": 0
+      },
+      {
+        "id": "q10",
+        "question": "What is the core limitation of Bag of Words (BoW) models?",
+        "options": ["They require GPU acceleration", "They discard word order and grammatical context entirely", "They cannot count word frequencies", "They work only on English text"],
+        "correct_index": 1
+      }
+    ]
+  },
+  {
+    "id": "assessment-llm-apps",
+    "title": "Building LLM Applications Quiz",
+    "skill_id": "llms",
+    "pass_threshold": 0.6,
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is the primary role of the Self-Attention mechanism in Transformers?",
+        "options": ["To filter out rare words", "To compute dynamic relevance weights between all pairs of tokens in a sequence simultaneously", "To reduce GPU VRAM to zero", "To perform supervised linear regression"],
+        "correct_index": 1
+      },
+      {
+        "id": "q2",
+        "question": "What does RAG (Retrieval-Augmented Generation) do in LLM systems?",
+        "options": ["Re-trains the LLM from scratch on new data daily", "Retrieves relevant context documents from an external knowledge base and injects them into the prompt", "Removes all prompt engineering constraints", "Increases model parameters dynamically"],
+        "correct_index": 1
+      },
+      {
+        "id": "q3",
+        "question": "What does setting the sampling Temperature to 0.0 do in LLM text generation?",
+        "options": ["Makes the output maximum randomness and creative", "Makes generation deterministic by greedily selecting the highest probability token at each step", "Disables the context window", "Halves response generation latency"],
+        "correct_index": 1
+      },
+      {
+        "id": "q4",
+        "question": "What is Chain-of-Thought (CoT) prompting?",
+        "options": ["Chaining multiple LLMs in serial HTTP requests", "Instructing the model to generate intermediate reasoning steps before arriving at a final answer", "Passing base64 encoded strings in prompts", "Looping API requests until a 200 response is returned"],
+        "correct_index": 1
+      },
+      {
+        "id": "q5",
+        "question": "What is LoRA (Low-Rank Adaptation) in LLM fine-tuning?",
+        "options": ["A parameter-efficient fine-tuning technique that trains low-rank matrix decompositions alongside frozen weights", "A method to delete model weights", "A compression format for vector databases", "A tokenization strategy for emojis"],
+        "correct_index": 0
+      },
+      {
+        "id": "q6",
+        "question": "What is an LLM hallucination?",
+        "options": ["A model crash due to out-of-memory errors", "The generation of factually incorrect or fabricated information presented with high confidence", "A syntax error in JSON mode", "A token latency spike"],
+        "correct_index": 1
+      },
+      {
+        "id": "q7",
+        "question": "What is the ReAct pattern in autonomous AI agents?",
+        "options": ["React.js frontend rendering engine", "Synergizing Reasoning (thought) and Acting (tool invocation and observation) in an iterative loop", "Reactive programming with RxJS", "Recursive activation functions in MLPs"],
+        "correct_index": 1
+      },
+      {
+        "id": "q8",
+        "question": "Why is document chunking essential before storing embeddings in vector databases?",
+        "options": ["Vector databases cannot store more than 1 document", "Embeddings are most semantically accurate on focused chunks that fit within embedding model context limits", "Chunking converts text into audio files", "Chunking bypasses vector search algorithms"],
+        "correct_index": 1
+      },
+      {
+        "id": "q9",
+        "question": "What sampling parameter restricts candidate tokens to the smallest set whose cumulative probability exceeds threshold p?",
+        "options": ["Top-k", "Top-p (Nucleus sampling)", "Frequency penalty", "Presence penalty"],
+        "correct_index": 1
+      },
+      {
+        "id": "q10",
+        "question": "What is Few-Shot prompting?",
+        "options": ["Running prompt queries only 3 times", "Providing several demonstration input-output examples directly inside the prompt context", "Fine-tuning on under 50 samples", "Using small quantized models"],
+        "correct_index": 1
+      }
+    ]
+  },
+  {
+    "id": "assessment-data-analysis",
+    "title": "Data Analysis with Python Quiz",
+    "skill_id": "data_analysis",
+    "pass_threshold": 0.6,
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Which Pandas function is used to handle missing (NaN) values by replacing them with a specific value or mean?",
+        "options": ["df.dropna()", "df.fillna()", "df.isna()", "df.replace_null()"],
+        "correct_index": 1
+      },
+      {
+        "id": "q2",
+        "question": "What does df.groupby('category')['sales'].mean() compute?",
+        "options": ["The overall mean of the sales column", "The average sales grouped separately for each category", "The total count of categories", "Sorts sales in descending order"],
+        "correct_index": 1
+      },
+      {
+        "id": "q3",
+        "question": "How do you select rows in a DataFrame where column 'age' is greater than 25?",
+        "options": ["df.select(age > 25)", "df[df['age'] > 25]", "df.filter('age > 25')", "df.where(age > 25)"],
+        "correct_index": 1
+      },
+      {
+        "id": "q4",
+        "question": "What is the difference between df.loc and df.iloc in Pandas?",
+        "options": ["df.loc is label-based indexing; df.iloc is integer position-based indexing", "df.loc is for columns only; df.iloc is for rows only", "df.loc is slower because it uses SQL", "There is no difference"],
+        "correct_index": 0
+      },
+      {
+        "id": "q5",
+        "question": "Which function combines two DataFrames along a specific axis (rows or columns)?",
+        "options": ["pd.concat()", "pd.split()", "df.combine_all()", "df.union()"],
+        "correct_index": 0
+      },
+      {
+        "id": "q6",
+        "question": "What does the Interquartile Range (IQR) represent in outlier detection?",
+        "options": ["The difference between the 75th percentile (Q3) and 25th percentile (Q1)", "The maximum minus the minimum value", "The mean divided by standard deviation", "The sum of all squared deviations"],
+        "correct_index": 0
+      },
+      {
+        "id": "q7",
+        "question": "Which method generates summary statistics (count, mean, std, min, percentiles, max) for numeric columns?",
+        "options": ["df.info()", "df.describe()", "df.summary()", "df.stats()"],
+        "correct_index": 1
+      },
+      {
+        "id": "q8",
+        "question": "How do you remove duplicate rows from a Pandas DataFrame?",
+        "options": ["df.unique()", "df.drop_duplicates()", "df.distinct()", "df.clean_duplicates()"],
+        "correct_index": 1
+      },
+      {
+        "id": "q9",
+        "question": "What does pd.to_datetime() do?",
+        "options": ["Returns the current computer system time", "Converts string or numeric date representations into Pandas Datetime objects", "Schedules a task in cron", "Formats numbers as currency"],
+        "correct_index": 1
+      },
+      {
+        "id": "q10",
+        "question": "Which method reshapes a DataFrame from long format to wide format?",
+        "options": ["df.pivot_table()", "df.melt()", "df.flatten()", "df.squeeze()"],
+        "correct_index": 0
+      }
+    ]
+  },
+  {
+    "id": "assessment-data-viz",
+    "title": "Data Visualization Masterclass Quiz",
+    "skill_id": "data_visualization",
+    "pass_threshold": 0.6,
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Which chart type is best suited to display the distribution and spread of continuous numerical data?",
+        "options": ["Pie Chart", "Histogram / Box Plot", "Donut Chart", "Treemap"],
+        "correct_index": 1
+      },
+      {
+        "id": "q2",
+        "question": "What is the primary library hierarchy in Matplotlib?",
+        "options": ["Figure contains one or more Axes, and Axes contains plot elements (lines, bars, labels)", "Canvas contains Views only", "Plot contains Chart and Grid", "Widget contains Display"],
+        "correct_index": 0
+      },
+      {
+        "id": "q3",
+        "question": "Which Seaborn function displays pairwise relationships across an entire dataset?",
+        "options": ["sns.heatmap()", "sns.pairplot()", "sns.barplot()", "sns.lineplot()"],
+        "correct_index": 1
+      },
+      {
+        "id": "q4",
+        "question": "Why should 3D pie charts and truncated y-axes generally be avoided in data visualizations?",
+        "options": ["They crash browser canvas renderers", "They distort data proportions and mislead human visual perception", "They cannot be printed in black and white", "They require SVG vector format"],
+        "correct_index": 1
+      },
+      {
+        "id": "q5",
+        "question": "Which chart type effectively reveals the correlation and relationship between two continuous variables?",
+        "options": ["Scatter Plot", "Stacked Bar Chart", "Pie Chart", "Funnel Chart"],
+        "correct_index": 0
+      },
+      {
+        "id": "q6",
+        "question": "What does a Heatmap in Seaborn visualize when applied to 'df.corr()'?",
+        "options": ["Server CPU temperatures", "A 2D color-encoded matrix of correlation coefficients between features", "Geographical user locations", "Memory usage per column"],
+        "correct_index": 1
+      },
+      {
+        "id": "q7",
+        "question": "What is the purpose of visual hierarchy in dashboard design?",
+        "options": ["Guides the viewer's eye to key insights and most critical metrics first", "Uses maximum number of bright colors", "Fills every pixel with data tables", "Rotates labels at 45 degrees"],
+        "correct_index": 0
+      },
+      {
+        "id": "q8",
+        "question": "What does the hue parameter in Seaborn plot functions do?",
+        "options": ["Sets brightness of the screen", "Groups and colors data points by a categorical variable", "Applies contrast filters", "Blurs background lines"],
+        "correct_index": 1
+      },
+      {
+        "id": "q9",
+        "question": "Which chart shows the composition of categorical parts of a whole over continuous time?",
+        "options": ["Stacked Area Chart", "Radar Chart", "Bubble Chart", "Candlestick Chart"],
+        "correct_index": 0
+      },
+      {
+        "id": "q10",
+        "question": "Why is color accessibility (e.g. ColorBrewer, viridis palette) important in visualization?",
+        "options": ["Reduces image file size", "Ensures charts remain legible and interpretable for individuals with color vision deficiencies", "Increases monitor refresh rates", "Improves vector rendering speed"],
+        "correct_index": 1
+      }
+    ]
+  },
+  {
+    "id": "assessment-dsa",
+    "title": "Data Structures & Algorithms Quiz",
+    "skill_id": "data_structures",
+    "pass_threshold": 0.6,
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is the average time complexity of searching an element in a balanced Hash Table?",
+        "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+        "correct_index": 0
+      },
+      {
+        "id": "q2",
+        "question": "Which data structure operates on a Last-In, First-Out (LIFO) basis?",
+        "options": ["Queue", "Stack", "Linked List", "Binary Heap"],
+        "correct_index": 1
+      },
+      {
+        "id": "q3",
+        "question": "What is the worst-case time complexity of QuickSort?",
+        "options": ["O(n)", "O(n log n)", "O(n^2)", "O(2^n)"],
+        "correct_index": 2
+      },
+      {
+        "id": "q4",
+        "question": "Which graph traversal algorithm uses a Queue and visits nodes level by level?",
+        "options": ["Depth-First Search (DFS)", "Breadth-First Search (BFS)", "Binary Search", "Topological Sort"],
+        "correct_index": 1
+      },
+      {
+        "id": "q5",
+        "question": "In a Binary Search Tree (BST), what traversal visits nodes in non-decreasing sorted order?",
+        "options": ["Pre-order", "In-order", "Post-order", "Level-order"],
+        "correct_index": 1
+      },
+      {
+        "id": "q6",
+        "question": "What technique avoids redundant recursive calculations by storing subproblem results in a lookup table?",
+        "options": ["Dynamic Programming (Memoization / Tabulation)", "Divide and Conquer without cache", "Greedy Choice", "Backtracking"],
+        "correct_index": 0
+      },
+      {
+        "id": "q7",
+        "question": "What is the time complexity of Binary Search on a sorted array of size n?",
+        "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+        "correct_index": 1
+      },
+      {
+        "id": "q8",
+        "question": "Which data structure is ideal for finding the minimum (or maximum) element in O(1) time?",
+        "options": ["Min-Heap / Priority Queue", "Doubly Linked List", "Circular Queue", "Trie"],
+        "correct_index": 0
+      },
+      {
+        "id": "q9",
+        "question": "What algorithm finds the shortest path between nodes in a weighted graph with non-negative edge weights?",
+        "options": ["Dijkstra's Algorithm", "Kruskal's Algorithm", "Prim's Algorithm", "Floyd-Warshall"],
+        "correct_index": 0
+      },
+      {
+        "id": "q10",
+        "question": "What algorithm design pattern uses two pointers moving towards each other to find target pairs in sorted arrays?",
+        "options": ["Two-Pointer Technique", "Sliding Window Maximum", "Prefix Sum", "Monotonic Stack"],
+        "correct_index": 0
+      }
+    ]
+  },
+  {
+    "id": "assessment-kubernetes",
+    "title": "Kubernetes in Practice Quiz",
+    "skill_id": "kubernetes",
+    "pass_threshold": 0.6,
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is the smallest deployable computing unit in Kubernetes?",
+        "options": ["Cluster", "Node", "Pod", "Container Image"],
+        "correct_index": 2
+      },
+      {
+        "id": "q2",
+        "question": "Which Kubernetes resource manages rolling updates, rollbacks, and replica counts of Pods declaratively?",
+        "options": ["Deployment", "DaemonSet", "ConfigMap", "StatefulSet only"],
+        "correct_index": 0
+      },
+      {
+        "id": "q3",
+        "question": "What is the default Service type that exposes an application only within the internal cluster network?",
+        "options": ["NodePort", "ClusterIP", "LoadBalancer", "ExternalName"],
+        "correct_index": 1
+      },
+      {
+        "id": "q4",
+        "question": "Which component in the Kubernetes Control Plane acts as the consistent, highly-available key-value store for all cluster data?",
+        "options": ["kube-apiserver", "etcd", "kube-scheduler", "kubelet"],
+        "correct_index": 1
+      },
+      {
+        "id": "q5",
+        "question": "What is the difference between a livenessProbe and a readinessProbe?",
+        "options": ["livenessProbe restarts failed containers; readinessProbe determines if a pod should receive network traffic", "livenessProbe routes traffic; readinessProbe kills the pod", "They are synonyms in Kubernetes", "livenessProbe runs only during build"],
+        "correct_index": 0
+      },
+      {
+        "id": "q6",
+        "question": "Which object manages external HTTP/HTTPS routing and SSL termination to internal cluster Services?",
+        "options": ["Ingress", "Kube-Proxy", "NetworkPolicy", "ClusterRole"],
+        "correct_index": 0
+      },
+      {
+        "id": "q7",
+        "question": "What controller automatically scales the number of Pod replicas based on observed CPU utilization?",
+        "options": ["Horizontal Pod Autoscaler (HPA)", "Vertical Pod Autoscaler (VPA)", "Cluster Autoscaler", "Kube-Scheduler"],
+        "correct_index": 0
+      },
+      {
+        "id": "q8",
+        "question": "Where should non-confidential configuration key-value pairs be stored in Kubernetes?",
+        "options": ["ConfigMaps", "Secrets", "PersistentVolumes", "HostPath"],
+        "correct_index": 0
+      },
+      {
+        "id": "q9",
+        "question": "What agent runs on every worker node to ensure containers described in PodSpecs are running and healthy?",
+        "options": ["kubelet", "kube-controller-manager", "containerd only", "kubectl"],
+        "correct_index": 0
+      },
+      {
+        "id": "q10",
+        "question": "What abstraction claims persistent storage of a specific size and access mode in Kubernetes?",
+        "options": ["PersistentVolumeClaim (PVC)", "StorageClass only", "VolumeAttachment", "EmptyDir"],
+        "correct_index": 0
+      }
+    ]
+  },
+  {
+    "id": "assessment-aws",
+    "title": "AWS Solutions Architect Essentials Quiz",
+    "skill_id": "aws",
+    "pass_threshold": 0.6,
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Which AWS compute service provides resizable virtual servers in the cloud?",
+        "options": ["Amazon EC2", "AWS Lambda", "Amazon ECS", "AWS Fargate"],
+        "correct_index": 0
+      },
+      {
+        "id": "q2",
+        "question": "What is the most cost-effective S3 storage class for long-term archiving where retrieval times of hours are acceptable?",
+        "options": ["S3 Standard", "S3 Intelligent-Tiering", "S3 Glacier / Glacier Deep Archive", "S3 One Zone-IA"],
+        "correct_index": 2
+      },
+      {
+        "id": "q3",
+        "question": "Which AWS database service provides fully-managed relational engines like PostgreSQL and MySQL?",
+        "options": ["Amazon DynamoDB", "Amazon RDS", "Amazon Redshift", "Amazon ElastiCache"],
+        "correct_index": 1
+      },
+      {
+        "id": "q4",
+        "question": "What networking component allows private subnet EC2 instances to access the internet while blocking inbound internet connections?",
+        "options": ["Internet Gateway", "NAT Gateway", "Route 53", "Security Group"],
+        "correct_index": 1
+      },
+      {
+        "id": "q5",
+        "question": "Which AWS service is a highly-available managed Domain Name System (DNS) web service?",
+        "options": ["Amazon Route 53", "AWS CloudFront", "AWS Direct Connect", "Amazon VPC"],
+        "correct_index": 0
+      },
+      {
+        "id": "q6",
+        "question": "What AWS service records user activity and API calls across AWS accounts for auditing and governance?",
+        "options": ["Amazon CloudWatch", "AWS CloudTrail", "AWS Config", "Amazon Inspector"],
+        "correct_index": 1
+      },
+      {
+        "id": "q7",
+        "question": "Which Load Balancer type operates at Layer 7 (HTTP/HTTPS) and routes traffic based on URL paths and headers?",
+        "options": ["Application Load Balancer (ALB)", "Network Load Balancer (NLB)", "Classic Load Balancer", "Gateway Load Balancer"],
+        "correct_index": 0
+      },
+      {
+        "id": "q8",
+        "question": "What feature enables automated scaling and self-healing replacement of EC2 instances based on demand?",
+        "options": ["Auto Scaling Groups", "Elastic Beanstalk", "AWS Batch", "Placement Groups"],
+        "correct_index": 0
+      },
+      {
+        "id": "q9",
+        "question": "What AWS service acts as an API frontend for executing serverless Lambda backend functions?",
+        "options": ["Amazon API Gateway", "Amazon SNS", "Amazon SQS", "AWS Step Functions"],
+        "correct_index": 0
+      },
+      {
+        "id": "q10",
+        "question": "Which pillar of the AWS Well-Architected Framework focuses on the ability to recover from disruptions and dynamically meet demand?",
+        "options": ["Security", "Reliability", "Cost Optimization", "Performance Efficiency"],
+        "correct_index": 1
+      }
+    ]
+  },
+  {
+    "id": "assessment-cybersec",
+    "title": "Cybersecurity Foundations Quiz",
+    "skill_id": "cybersecurity_basics",
+    "pass_threshold": 0.6,
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What are the three pillars of the foundational CIA Triad in information security?",
+        "options": ["Control, Identification, Access", "Confidentiality, Integrity, Availability", "Cryptography, Inspection, Authorization", "Certificates, IP, Authentication"],
+        "correct_index": 1
+      },
+      {
+        "id": "q2",
+        "question": "What type of attack involves injecting malicious SQL commands into input fields to manipulate database queries?",
+        "options": ["Cross-Site Scripting (XSS)", "SQL Injection (SQLi)", "Cross-Site Request Forgery (CSRF)", "Man-in-the-Middle (MitM)"],
+        "correct_index": 1
+      },
+      {
+        "id": "q3",
+        "question": "What is the primary defense against SQL Injection in application code?",
+        "options": ["Parameterized queries / Prepared statements", "Hiding input boxes in HTML", "Encrypting database disk only", "Using GET requests instead of POST"],
+        "correct_index": 0
+      },
+      {
+        "id": "q4",
+        "question": "What is the main difference between symmetric and asymmetric encryption?",
+        "options": ["Symmetric uses one shared key for encryption and decryption; Asymmetric uses a public/private key pair", "Symmetric uses two keys; Asymmetric uses one key", "Symmetric is only for passwords", "Asymmetric cannot encrypt data"],
+        "correct_index": 0
+      },
+      {
+        "id": "q5",
+        "question": "What vulnerability occurs when an application executes unescaped user-supplied scripts in another user's browser?",
+        "options": ["Cross-Site Scripting (XSS)", "Buffer Overflow", "Denial of Service (DoS)", "Directory Traversal"],
+        "correct_index": 0
+      },
+      {
+        "id": "q6",
+        "question": "Why should passwords always be hashed with a salted slow algorithm (e.g. bcrypt, Argon2) rather than SHA-256?",
+        "options": ["Slow cryptographic hashing resists brute-force and dictionary attacks with rainbow tables", "SHA-256 cannot hash strings", "bcrypt makes passwords shorter", "Argon2 runs on the GPU"],
+        "correct_index": 0
+      },
+      {
+        "id": "q7",
+        "question": "What does Multi-Factor Authentication (MFA) require?",
+        "options": ["Two different passwords", "Two or more distinct authentication factors (something you know, have, or are)", "A password longer than 20 characters", "Logging in from two devices simultaneously"],
+        "correct_index": 1
+      },
+      {
+        "id": "q8",
+        "question": "What is the core philosophy of Zero Trust Architecture?",
+        "options": ["Trust all devices inside the corporate network perimeter", "Never trust, always verify every access request regardless of location", "Disable all user passwords", "Block all external web traffic"],
+        "correct_index": 1
+      },
+      {
+        "id": "q9",
+        "question": "What protocol secures HTTP communication using TLS encryption and digital certificates?",
+        "options": ["SSH", "HTTPS", "FTP", "SNMP"],
+        "correct_index": 1
+      },
+      {
+        "id": "q10",
+        "question": "What is Cross-Site Request Forgery (CSRF)?",
+        "options": ["An attack that tricks an authenticated user's browser into executing unwanted actions on a trusted site", "A brute-force attack on SSH ports", "Intercepting Wi-Fi radio waves", "Overloading network switches with packets"],
+        "correct_index": 0
       }
     ]
   }

@@ -95,12 +95,47 @@ def _path_to_out(lp: LearningPath, narrative: str | None = None) -> RoadmapOut:
     )
 
 
+COURSE_PHASES: dict[str, str] = {
+    "course-python-basics": "Foundation",
+    "course-sql": "Foundation",
+    "course-html-css": "Foundation",
+    "course-cloud": "Foundation",
+    "course-data-viz": "Foundation",
+    "course-statistics": "Core Skills",
+    "course-linear-algebra": "Core Skills",
+    "course-data-analysis": "Core Skills",
+    "course-javascript": "Core Skills",
+    "course-react": "Core Skills",
+    "course-nodejs": "Core Skills",
+    "course-docker": "Core Skills",
+    "course-aws": "Core Skills",
+    "course-cybersec": "Core Skills",
+    "course-ml-fundamentals": "Advanced",
+    "course-deep-learning": "Advanced",
+    "course-nlp": "Advanced",
+    "course-llm-apps": "Advanced",
+    "course-dsa": "Advanced",
+    "course-kubernetes": "Advanced",
+}
+
+ASSESSMENT_PHASES: dict[str, str] = {
+    "assessment-sql": "Foundation",
+    "assessment-python": "Foundation",
+    "assessment-statistics": "Core Skills",
+    "assessment-react": "Core Skills",
+    "assessment-ml": "Advanced",
+}
+
+
 def _infer_phase(pi: PathItem) -> str:
-    if pi.item_type.value == "assessment":
-        return "Assessment"
     if pi.item_type.value == "project":
         return "Capstone Projects"
-    return "Core Skills"
+    if pi.item_type.value == "assessment":
+        return ASSESSMENT_PHASES.get(pi.item_id, "Core Skills")
+    if pi.item_type.value == "reinforcement":
+        return "Reinforcement"
+    return COURSE_PHASES.get(pi.item_id, "Core Skills")
+
 
 
 # ── endpoints ─────────────────────────────────────────────────────────────────

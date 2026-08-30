@@ -9,6 +9,7 @@ import {
 } from 'react-router-dom'
 import {
   BookOpen,
+  ClipboardList,
   LayoutDashboard,
   LogOut,
   Map,
@@ -16,27 +17,31 @@ import {
   TrendingUp,
   Zap,
 } from 'lucide-react'
+
 import { AuthProvider, useAuth } from './hooks/useAuth'
-import AssessmentPage    from './pages/AssessmentPage'
-import CoursesPage       from './pages/CoursesPage'
-import DashboardPage     from './pages/DashboardPage'
-import LandingPage       from './pages/LandingPage'
-import LoginPage         from './pages/LoginPage'
-import OnboardingPage    from './pages/OnboardingPage'
-import RegisterPage      from './pages/RegisterPage'
-import RoadmapPage       from './pages/RoadmapPage'
-import SkillGapPage      from './pages/SkillGapPage'
-import TutorPage         from './pages/TutorPage'
+import AssessmentPage      from './pages/AssessmentPage'
+import AssessmentsListPage  from './pages/AssessmentsListPage'
+import CoursesPage         from './pages/CoursesPage'
+import DashboardPage       from './pages/DashboardPage'
+import LandingPage         from './pages/LandingPage'
+import LoginPage           from './pages/LoginPage'
+import OnboardingPage      from './pages/OnboardingPage'
+import RegisterPage        from './pages/RegisterPage'
+import RoadmapPage         from './pages/RoadmapPage'
+import SkillGapPage        from './pages/SkillGapPage'
+import TutorPage           from './pages/TutorPage'
 import { fetchHealth, type HealthResponse } from './services/api'
 
 // ── Nav config ──────────────────────────────────────────────────────────────
 const NAV_ITEMS = [
-  { to: '/dashboard', label: 'Dashboard', icon: <LayoutDashboard className="h-4 w-4" /> },
-  { to: '/roadmap',   label: 'Roadmap',   icon: <Map            className="h-4 w-4" /> },
-  { to: '/courses',   label: 'Courses',   icon: <BookOpen       className="h-4 w-4" /> },
-  { to: '/skill-gap', label: 'Skill Gap', icon: <TrendingUp     className="h-4 w-4" /> },
-  { to: '/tutor',     label: 'AI Tutor',  icon: <Zap            className="h-4 w-4" /> },
+  { to: '/dashboard',   label: 'Dashboard',   icon: <LayoutDashboard className="h-4 w-4" /> },
+  { to: '/roadmap',     label: 'Roadmap',     icon: <Map            className="h-4 w-4" /> },
+  { to: '/courses',     label: 'Courses',     icon: <BookOpen       className="h-4 w-4" /> },
+  { to: '/assessments', label: 'Assessments', icon: <ClipboardList  className="h-4 w-4" /> },
+  { to: '/skill-gap',   label: 'Skill Gap',   icon: <TrendingUp     className="h-4 w-4" /> },
+  { to: '/tutor',       label: 'AI Tutor',    icon: <Zap            className="h-4 w-4" /> },
 ]
+
 
 // ── Guards ───────────────────────────────────────────────────────────────────
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
@@ -131,6 +136,7 @@ function AppShell() {
           <Route path="/dashboard"  element={<ProtectedRoute><DashboardPage /></ProtectedRoute>} />
           <Route path="/roadmap"    element={<ProtectedRoute><RoadmapPage /></ProtectedRoute>} />
           <Route path="/courses"    element={<ProtectedRoute><CoursesPage /></ProtectedRoute>} />
+          <Route path="/assessments" element={<ProtectedRoute><AssessmentsListPage /></ProtectedRoute>} />
           <Route path="/skill-gap"  element={<ProtectedRoute><SkillGapPage /></ProtectedRoute>} />
           <Route path="/tutor"      element={<ProtectedRoute><TutorPage /></ProtectedRoute>} />
           <Route

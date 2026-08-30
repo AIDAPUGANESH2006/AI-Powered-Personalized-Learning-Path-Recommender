@@ -152,6 +152,17 @@ export const markItemComplete = (itemId: string) =>
 
 export interface AssessmentQuestion { id: string; question: string; options: string[] }
 
+export interface AssessmentSummary {
+  id: string
+  title: string
+  skill_id: string
+  skill_name: string
+  pass_threshold: number
+  question_count: number
+  latest_score: number | null
+  passed: boolean
+}
+
 export interface AssessmentOut {
   id: string; title: string; skill_id: string
   pass_threshold: number; questions: AssessmentQuestion[]
@@ -163,12 +174,15 @@ export interface AssessmentSubmitResult {
   adaptation_action: string; adaptation_message: string
 }
 
+export const fetchAssessments = () => request<AssessmentSummary[]>('/api/assessment')
+
 export const fetchAssessment = (id: string) => request<AssessmentOut>(`/api/assessment/${id}`)
 
 export const submitAssessment = (assessmentId: string, answers: Record<string, number>) =>
   request<AssessmentSubmitResult>('/api/assessment/submit', {
     method: 'POST', body: JSON.stringify({ assessment_id: assessmentId, answers }),
   })
+
 
 // ── feedback ───────────────────────────────────────────────────────────────
 

@@ -154,9 +154,20 @@ export default function SkillGapPage() {
   )
 }
 
+const SKILL_ASSESSMENT_MAP: Record<string, string> = {
+  sql: 'assessment-sql',
+  python: 'assessment-python',
+  react: 'assessment-react',
+  machine_learning: 'assessment-ml',
+  statistics: 'assessment-statistics',
+}
+
 function GapCard({ gap }: { gap: SkillGapItem }) {
+  const navigate = useNavigate()
   const currentPct = Math.round(gap.current_level * 100)
   const requiredPct = Math.round(gap.required_level * 100)
+  const assessmentId = SKILL_ASSESSMENT_MAP[gap.skill_id]
+
   return (
     <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
       <div className="mb-2 flex items-center justify-between">
@@ -182,6 +193,19 @@ function GapCard({ gap }: { gap: SkillGapItem }) {
           {currentPct}% → {requiredPct}%
         </span>
       </div>
+
+      {assessmentId && (
+        <div className="mt-3 flex justify-end">
+          <button
+            type="button"
+            onClick={() => navigate(`/assessment/${assessmentId}`)}
+            className="inline-flex items-center gap-1.5 rounded-lg bg-indigo-50 px-2.5 py-1 text-xs font-semibold text-indigo-700 hover:bg-indigo-100 transition"
+          >
+            Take Skill Quiz →
+          </button>
+        </div>
+      )}
     </div>
   )
 }
+
